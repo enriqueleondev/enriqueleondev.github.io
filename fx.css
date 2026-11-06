@@ -1,0 +1,38 @@
+/* Efectos compartidos: barra de estado, línea que se dibuja, revelado al hacer scroll y fondo animado (fx.js). */
+.hud{display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px;font:500 12px/1.4 var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--muted);
+  border:1px solid var(--rule);border-radius:4px;padding:8px 12px;background:color-mix(in srgb,var(--surface) 82%,transparent);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.hud .sp{flex:1 1 auto}
+.hud b{font-weight:500;color:var(--ink)}
+.hud .on{display:inline-flex;align-items:center;gap:8px;color:var(--ink)}
+.hud .on::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--l-emb);animation:fxpulse 1.8s ease-out infinite}
+@keyframes fxpulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--l-emb) 65%,transparent)}70%,100%{box-shadow:0 0 0 9px transparent}}
+.hud button{all:unset;cursor:pointer;border:1px solid var(--rule);border-radius:999px;padding:3px 10px;letter-spacing:.07em}
+.hud button:hover{border-color:var(--ink);color:var(--ink)}
+.hud button:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.hud button[aria-pressed="false"]{text-decoration:line-through;opacity:.7}
+@media (max-width:720px){.hud .xy,.hud .loc{display:none}}
+
+.enter{font:500 13px/1.4 var(--mono);color:var(--muted);text-decoration:none;display:inline-flex;gap:8px;align-items:center;width:fit-content}
+.enter:hover{color:var(--ink)}
+.enter kbd{font:500 12px/1 var(--mono);border:1px solid var(--rule);border-bottom-width:2px;border-radius:3px;padding:3px 6px;background:var(--surface);animation:fxkey 2.4s ease-in-out infinite}
+@keyframes fxkey{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
+@media (hover:none){.enter{display:none}}
+
+/* línea de metro que se dibuja bajo el nombre */
+.drawline{display:block;width:min(560px,100%);height:44px;overflow:visible}
+.drawline path{fill:none;stroke:var(--l-web);stroke-width:8;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:640;stroke-dashoffset:640;animation:fxdraw 1.5s .2s cubic-bezier(.6,.1,.2,1) forwards}
+.drawline circle{fill:var(--surface);stroke:var(--ink);stroke-width:4;transform-box:fill-box;transform-origin:center;transform:scale(0);animation:fxpop .4s forwards}
+.drawline circle:nth-of-type(1){animation-delay:.3s}.drawline circle:nth-of-type(2){animation-delay:.8s}.drawline circle:nth-of-type(3){animation-delay:1.3s}.drawline circle:nth-of-type(4){animation-delay:1.7s}
+@keyframes fxdraw{to{stroke-dashoffset:0}}
+@keyframes fxpop{60%{transform:scale(1.25)}to{transform:scale(1)}}
+
+/* revelado al hacer scroll (solo si hay JS) */
+.js-rv .rv{opacity:0;transform:translateY(16px);transition:opacity .65s ease,transform .65s ease}
+.js-rv .rv.in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  .js-rv .rv{opacity:1;transform:none;transition:none}
+  .drawline path{stroke-dashoffset:0;animation:none}.drawline circle{transform:none;animation:none}
+  .hud .on::before,.enter kbd{animation:none}
+}
+@media print{#bgfx,.hud,.enter{display:none!important}.js-rv .rv{opacity:1!important;transform:none!important}}

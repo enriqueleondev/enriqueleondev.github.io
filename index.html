@@ -11,9 +11,10 @@
 <meta property="og:site_name" content="Enrique Rentería León">
 <meta property="og:url" content="https://enriqueleondev.github.io/">
 <meta property="og:locale" content="es_MX">
+<meta property="og:locale:alternate" content="en_US">
 <meta property="og:title" content="Enrique Rentería León – Ingeniero de Software">
 <meta property="og:description" content="Ingeniero de Software | Java · Spring Boot · React · Android | Rutario en producción · Docker · PostgreSQL | UAEM">
-<meta property="og:image" content="https://enriqueleondev.github.io/og.png">
+<meta property="og:image" content="https://enriqueleondev.github.io/og.png?v=2">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Enrique Rentería León, Ingeniero de Software: Java, Spring Boot, React y Android">
@@ -238,6 +239,7 @@ img{max-width:100%}
 .svc h3{font-size:26px;margin-bottom:6px}
 .linkrow .lbl{font:600 20px var(--display)}
 </style>
+<link rel="stylesheet" href="fx.css">
 
 </head>
 <body>
@@ -258,7 +260,17 @@ img{max-width:100%}
 
 <main class="wrap" id="top">
   <div class="hero">
+    <div class="hud" role="group" aria-label="Estado del sistema">
+      <span data-en="Personal map // Portfolio">Plano personal // Portafolio</span>
+      <span class="loc">Metepec, Edomex</span>
+      <span data-hud-date></span>
+      <span class="sp"></span>
+      <span class="xy">Cursor X <b data-hud-x>0000</b> · Y <b data-hud-y>0000</b></span>
+      <span class="on" data-en="System online">Sistema en línea</span>
+      <button type="button" data-hud-bg aria-pressed="true" title="Fondo animado" data-en="Background FX">Fondo</button>
+    </div>
     <h1>Enrique<br>Rentería León</h1>
+    <svg class="drawline" viewBox="0 0 560 44" aria-hidden="true"><path d="M6 14 H250 L280 34 H540"/><circle cx="6" cy="14" r="6"/><circle cx="150" cy="14" r="6"/><circle cx="400" cy="34" r="6"/><circle cx="540" cy="34" r="6"/></svg>
     <p class="lede" data-en="I build systems that work outside the lab: an app that already logs school internships in production, a Beowulf cluster built on a 10-port switch, a perceptron that cannot learn XOR and says so.">Construyo sistemas que funcionan fuera del laboratorio: una app que ya registra prácticas escolares en producción, un cluster Beowulf armado con un switch de 10 puertos y un perceptrón que no aprende XOR y lo demuestra.</p>
     <p class="meta" data-en="Jack · enriqueleondev · Software Engineering, UAEM Tianguistenco · 8th semester · Metepec, Edomex">Jack · enriqueleondev · Ingeniería en Software, UAEM Tianguistenco · 8.º semestre · Metepec, Edomex</p>
     <div class="tags"><span class="badge prod" data-en="Open to Java Trainee / junior full-stack">Disponible: Java Trainee / full-stack junior</span></div>
@@ -268,6 +280,7 @@ img{max-width:100%}
       <a class="btn" href="https://enriqueleondev.github.io/rutario/" target="_blank" rel="noopener" data-en="Try the Rutario demo">Probar la demo de Rutario</a>
       <a class="btn" href="mailto:leonenriquer201@gmail.com" data-en="Email me">Escríbeme</a>
     </div>
+    <a class="enter" href="cv/"><kbd>Enter</kbd><span data-en="opens the interactive résumé">abre el CV interactivo</span></a>
   </div>
 
   <section id="mapa" aria-labelledby="h-mapa">
@@ -557,6 +570,7 @@ img{max-width:100%}
     <p class="sub" data-en="How we start: you tell me the problem, we build a demo with fictional data and decide the scope from there. Rutario&#x27;s code is private and shown in a live technical review.">Cómo empezamos: me cuentas el problema, armamos una demo con datos ficticios y de ahí decidimos el alcance. El código de Rutario es privado y se muestra en una revisión técnica en vivo.</p>
     <div class="cta">
       <a class="btn primary" href="mailto:leonenriquer201@gmail.com?subject=Proyecto%20de%20software" data-en="Tell me about your project">Cuéntame tu proyecto</a>
+          <a class="btn" href="https://wa.me/527291799867" target="_blank" rel="noopener">WhatsApp</a>
       <a class="btn" href="https://www.linkedin.com/in/enrique-renteria-le%C3%B3n-71ba393b5" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </section>
@@ -566,6 +580,7 @@ img{max-width:100%}
     <div class="links">
       <div class="linkrow"><a href="cv/" data-en="Interactive résumé">CV interactivo</a><span class="mono">enriqueleondev.github.io/cv/</span></div>
       <div class="linkrow"><span class="lbl" data-en="Résumé (PDF)">CV (PDF)</span><a href="cv/Enrique-Renteria-Leon-CV-ES.pdf" download>Español</a><a href="cv/Enrique-Renteria-Leon-CV-EN.pdf" download>English</a></div>
+      <div class="linkrow"><a href="https://wa.me/527291799867" target="_blank" rel="noopener">WhatsApp</a><span class="mono">+52 729 179 9867</span><button class="btn" data-copy="+52 729 179 9867" data-en="Copy">Copiar</button></div>
       <div class="linkrow"><a href="mailto:leonenriquer201@gmail.com" data-en="Email">Correo</a><span class="mono">leonenriquer201@gmail.com</span><button class="btn" data-copy="leonenriquer201@gmail.com" data-en="Copy">Copiar</button></div>
       <div class="linkrow"><a href="https://github.com/enriqueleondev" target="_blank" rel="noopener">GitHub</a><span class="mono">github.com/enriqueleondev</span><button class="btn" data-copy="https://github.com/enriqueleondev" data-en="Copy">Copiar</button></div>
       <div class="linkrow"><a href="https://www.linkedin.com/in/enrique-renteria-le%C3%B3n-71ba393b5" target="_blank" rel="noopener">LinkedIn</a><span class="mono">linkedin.com/in/enrique-renteria-león-71ba393b5</span><button class="btn" data-copy="https://www.linkedin.com/in/enrique-renteria-le%C3%B3n-71ba393b5" data-en="Copy">Copiar</button></div>
@@ -915,7 +930,7 @@ const CMDS={
  lab(a){ const id=(a[0]||'').toLowerCase(); if(!LABS[id]) return say('lab <checkin|ahp|perceptron|cluster>','w'); setLab(id,true); say(T('Abriendo laboratorio: ','Opening lab: ')+LABS[id][lang==='en'?1:0],'c'); },
  cv(){ say(T('CV interactivo: ','Interactive résumé: ')+'https://enriqueleondev.github.io/cv/','c'); say(T('CV en español: ','Spanish résumé: ')+'https://enriqueleondev.github.io/cv/Enrique-Renteria-Leon-CV-ES.pdf','c'); say(T('CV en inglés:  ','English résumé: ')+'https://enriqueleondev.github.io/cv/Enrique-Renteria-Leon-CV-EN.pdf','c'); },
  caso(){ $('#caso').scrollIntoView({behavior:'smooth'}); say(T('Abriendo el caso de estudio…','Opening the case study…'),'c'); },
- contact(){ say('email     leonenriquer201@gmail.com'); say('github    https://github.com/enriqueleondev'); say('linkedin  https://www.linkedin.com/in/enrique-renteria-le%C3%B3n-71ba393b5'); },
+ contact(){ say('email     leonenriquer201@gmail.com'); say('whatsapp  +52 729 179 9867'); say('github    https://github.com/enriqueleondev'); say('linkedin  https://www.linkedin.com/in/enrique-renteria-le%C3%B3n-71ba393b5'); },
  theme(a){ setTheme(a[0]||null); say('ok','c'); },
  lang(a){ const l=(a[0]||'').toLowerCase(); setLang(l==='en'||l==='es'?l:(lang==='en'?'es':'en')); say('ok','c'); },
  clear(){ out.textContent=''; },
@@ -1052,5 +1067,6 @@ window.addEventListener('hashchange',()=>{ const x=(location.hash||'').replace('
 })();
 </script>
 
+<script src="fx.js"></script>
 </body>
 </html>

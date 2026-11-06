@@ -14,7 +14,8 @@
 <meta property="og:url" content="https://enriqueleondev.github.io/cv/">
 <meta property="og:site_name" content="Enrique Rentería León">
 <meta property="og:locale" content="es_MX">
-<meta property="og:image" content="https://enriqueleondev.github.io/og.png">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://enriqueleondev.github.io/og.png?v=2">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
@@ -139,6 +140,7 @@ body.filtering .item.hit{opacity:1;border-color:var(--ink);box-shadow:4px 4px 0 
   .projs{display:block}
 }
 </style>
+<link rel="stylesheet" href="../fx.css">
 </head>
 <body>
 <a class="skip" href="#main" data-en="Skip to content">Saltar al contenido</a>
@@ -155,11 +157,23 @@ body.filtering .item.hit{opacity:1;border-color:var(--ink);box-shadow:4px 4px 0 
 
 <main id="main">
 <div class="id">
+  <div class="hud" role="group" aria-label="Estado del sistema">
+    <span data-en="Personal record // Résumé">Registro personal // CV</span>
+    <span class="loc">Metepec, Edomex</span>
+    <span data-hud-date></span>
+    <span class="sp"></span>
+    <span class="xy">Cursor X <b data-hud-x>0000</b> · Y <b data-hud-y>0000</b></span>
+    <span class="on" data-en="System online">Sistema en línea</span>
+    <button type="button" data-hud-bg aria-pressed="true" title="Fondo animado" data-en="Background FX">Fondo</button>
+  </div>
   <h1>Enrique Rentería León</h1>
+  <svg class="drawline" viewBox="0 0 560 44" aria-hidden="true"><path d="M6 14 H250 L280 34 H540"/><circle cx="6" cy="14" r="6"/><circle cx="150" cy="14" r="6"/><circle cx="400" cy="34" r="6"/><circle cx="540" cy="34" r="6"/></svg>
   <div class="role" data-en="Software Engineering student · Java · Spring Boot · React · Android">Ingeniero de Software · Java · Spring Boot · React · Android</div>
   <div class="contact">
     <span data-en="Metepec, State of Mexico">Metepec, Estado de México</span>
     <button type="button" id="mail" data-mail="leonenriquer201@gmail.com">leonenriquer201@gmail.com</button>
+    <a href="tel:+527291799867">+52 729 179 9867</a>
+    <a href="https://wa.me/527291799867" target="_blank" rel="noopener">WhatsApp</a>
     <a href="https://github.com/enriqueleondev" target="_blank" rel="noopener">github.com/enriqueleondev</a>
     <a href="https://www.linkedin.com/in/enrique-renteria-le%C3%B3n-71ba393b5" target="_blank" rel="noopener">linkedin.com/in/enrique-renteria-león</a>
     <a href="../">enriqueleondev.github.io</a>
@@ -209,6 +223,7 @@ body.filtering .item.hit{opacity:1;border-color:var(--ink);box-shadow:4px 4px 0 
 </main>
 </div>
 <div class="toast" id="toast" role="status"></div>
+<script src="../fx.js"></script>
 
 <script>
 (function(){

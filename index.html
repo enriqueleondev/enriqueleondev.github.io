@@ -247,6 +247,7 @@ img{max-width:100%}
     <a class="lnk" href="#mapa" data-en="Map">Mapa</a>
     <a class="lnk" href="#lab" data-en="Lab">Laboratorio</a>
     <a class="lnk" href="#caso" data-en="Case study">Caso de estudio</a>
+    <a class="lnk" href="cv/" data-en="Résumé">CV</a>
     <a class="lnk" href="#terminal">Terminal</a>
     <a class="lnk" href="#contacto" data-en="Contact">Contacto</a>
     <button class="btn" id="btnPal" aria-label="Paleta de comandos"><kbd>Ctrl</kbd> <kbd>K</kbd></button>
@@ -263,6 +264,7 @@ img{max-width:100%}
     <div class="tags"><span class="badge prod" data-en="Open to Java Trainee / junior full-stack">Disponible: Java Trainee / full-stack junior</span></div>
     <div class="cta">
       <a class="btn primary" id="cvLink" href="cv/Enrique-Renteria-Leon-CV-ES.pdf" download data-cv-es="cv/Enrique-Renteria-Leon-CV-ES.pdf" data-cv-en="cv/Enrique-Renteria-Leon-CV-EN.pdf" data-en="Download résumé (PDF)">Descargar CV (PDF)</a>
+      <a class="btn" href="cv/" data-en="Interactive résumé">CV interactivo</a>
       <a class="btn" href="https://enriqueleondev.github.io/rutario/" target="_blank" rel="noopener" data-en="Try the Rutario demo">Probar la demo de Rutario</a>
       <a class="btn" href="mailto:leonenriquer201@gmail.com" data-en="Email me">Escríbeme</a>
     </div>
@@ -562,6 +564,7 @@ img{max-width:100%}
   <section id="contacto" aria-labelledby="h-con">
     <div class="sec-h"><h2 id="h-con" data-en="Contact">Contacto</h2></div>
     <div class="links">
+      <div class="linkrow"><a href="cv/" data-en="Interactive résumé">CV interactivo</a><span class="mono">enriqueleondev.github.io/cv/</span></div>
       <div class="linkrow"><span class="lbl" data-en="Résumé (PDF)">CV (PDF)</span><a href="cv/Enrique-Renteria-Leon-CV-ES.pdf" download>Español</a><a href="cv/Enrique-Renteria-Leon-CV-EN.pdf" download>English</a></div>
       <div class="linkrow"><a href="mailto:leonenriquer201@gmail.com" data-en="Email">Correo</a><span class="mono">leonenriquer201@gmail.com</span><button class="btn" data-copy="leonenriquer201@gmail.com" data-en="Copy">Copiar</button></div>
       <div class="linkrow"><a href="https://github.com/enriqueleondev" target="_blank" rel="noopener">GitHub</a><span class="mono">github.com/enriqueleondev</span><button class="btn" data-copy="https://github.com/enriqueleondev" data-en="Copy">Copiar</button></div>
@@ -910,7 +913,7 @@ const CMDS={
  open(a){ const id=(a[0]||'').toLowerCase(); if(!byId[id]) return say(T('No existe esa estación. Prueba ls.','No such station. Try ls.'),'w'); pick(id,true); say(T('Abriendo ','Opening ')+stName(byId[id])+'…','c'); },
  skills(){ const c={}; ST.forEach(s=>s.k.forEach(k=>c[k]=(c[k]||0)+1)); Object.keys(c).sort((a,b)=>c[b]-c[a]||a.localeCompare(b)).slice(0,14).forEach(k=>say(k.padEnd(18)+'█'.repeat(c[k])+' '+c[k])); },
  lab(a){ const id=(a[0]||'').toLowerCase(); if(!LABS[id]) return say('lab <checkin|ahp|perceptron|cluster>','w'); setLab(id,true); say(T('Abriendo laboratorio: ','Opening lab: ')+LABS[id][lang==='en'?1:0],'c'); },
- cv(){ say(T('CV en español: ','Spanish résumé: ')+'https://enriqueleondev.github.io/cv/Enrique-Renteria-Leon-CV-ES.pdf','c'); say(T('CV en inglés:  ','English résumé: ')+'https://enriqueleondev.github.io/cv/Enrique-Renteria-Leon-CV-EN.pdf','c'); },
+ cv(){ say(T('CV interactivo: ','Interactive résumé: ')+'https://enriqueleondev.github.io/cv/','c'); say(T('CV en español: ','Spanish résumé: ')+'https://enriqueleondev.github.io/cv/Enrique-Renteria-Leon-CV-ES.pdf','c'); say(T('CV en inglés:  ','English résumé: ')+'https://enriqueleondev.github.io/cv/Enrique-Renteria-Leon-CV-EN.pdf','c'); },
  caso(){ $('#caso').scrollIntoView({behavior:'smooth'}); say(T('Abriendo el caso de estudio…','Opening the case study…'),'c'); },
  contact(){ say('email     leonenriquer201@gmail.com'); say('github    https://github.com/enriqueleondev'); say('linkedin  https://www.linkedin.com/in/enrique-renteria-le%C3%B3n-71ba393b5'); },
  theme(a){ setTheme(a[0]||null); say('ok','c'); },
@@ -939,6 +942,7 @@ function palAll(){
   Object.keys(LABS).forEach(id=>a.push({t:LABS[id][lang==='en'?1:0],k:T('laboratorio','lab'),run:()=>setLab(id,true)}));
   a.push({t:'Terminal',k:T('sección','section'),run:()=>{$('#terminal').scrollIntoView({behavior:'smooth'});setTimeout(()=>cmd.focus({preventScroll:true}),400)}});
   a.push({t:T('Caso de estudio: Rutario','Case study: Rutario'),k:T('sección','section'),run:()=>$('#caso').scrollIntoView({behavior:'smooth'})});
+  a.push({t:T('CV interactivo','Interactive résumé'),k:T('página','page'),run:()=>{location.href='cv/';}});
   a.push({t:T('Descargar CV (PDF)','Download résumé (PDF)'),k:T('acción','action'),run:()=>{const c=$('#cvLink'); if(c) c.click();}});
   a.push({t:T('Contacto','Contact'),k:T('sección','section'),run:()=>$('#contacto').scrollIntoView({behavior:'smooth'})});
   a.push({t:T('Cambiar tema','Toggle theme'),k:T('acción','action'),run:()=>setTheme()});

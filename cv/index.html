@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Enrique Rentería León – CV interactivo</title>
+<meta name="description" content="CV interactivo de Enrique Rentería León, Ingeniero de Software: Java, Spring Boot, React y Android. Filtra por tecnología y descarga el PDF.">
+<link rel="canonical" href="https://enriqueleondev.github.io/cv/">
+<meta name="theme-color" content="#E7ECEF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B131A" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Enrique Rentería León – CV interactivo">
+<meta property="og:description" content="Java · Spring Boot · React · Android. Rutario en producción. Filtra por tecnología y descarga el PDF.">
+<meta property="og:url" content="https://enriqueleondev.github.io/cv/">
+<meta property="og:site_name" content="Enrique Rentería León">
+<meta property="og:locale" content="es_MX">
+<meta property="og:image" content="https://enriqueleondev.github.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2711%27 fill=%27%23F4F7F9%27 stroke=%27%230F1B25%27 stroke-width=%275%27/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  --bg:#E7ECEF; --surface:#F4F7F9; --ink:#0F1B25; --muted:#4D5C68; --rule:#AEBBC4; --focus:#1F5FD1;
+  --l-web:#1F5FD1; --l-desk:#D9650A; --l-emb:#12804D; --l-data:#7B3FC4; --l-ai:#D6284A; --l-infra:#9A7400;
+  --display:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
+  --serif:'Source Serif 4',Georgia,'Times New Roman',serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0B131A; --surface:#121D27; --ink:#E4ECF1; --muted:#90A2B0; --rule:#2B3B49; --focus:#7FB0FF;
+    --l-web:#5B9BFF; --l-desk:#FF9A3C; --l-emb:#3DD68C; --l-data:#B48CFF; --l-ai:#FF6B87; --l-infra:#F2C94C;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0B131A; --surface:#121D27; --ink:#E4ECF1; --muted:#90A2B0; --rule:#2B3B49; --focus:#7FB0FF;
+  --l-web:#5B9BFF; --l-desk:#FF9A3C; --l-emb:#3DD68C; --l-data:#B48CFF; --l-ai:#FF6B87; --l-infra:#F2C94C;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 var(--serif);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1100px;margin:0 auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+button{font:inherit;color:inherit}
+h1,h2,h3{font-family:var(--display);line-height:1;margin:0;text-wrap:balance}
+p{margin:0}
+.skip{position:absolute;left:-999px} .skip:focus{left:8px;top:8px;background:var(--surface);padding:8px 12px;z-index:20;border:2px solid var(--ink)}
+
+.top{position:sticky;top:0;z-index:9;background:var(--bg);border-bottom:2px solid var(--ink);
+  display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font:600 20px/1 var(--display);text-decoration:none}
+.roundel{width:34px;height:34px;border-radius:50%;border:3px solid var(--ink);display:grid;place-items:center;font:700 13px/1 var(--display);background:var(--surface)}
+.acts{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.btn{border:2px solid var(--ink);background:var(--surface);padding:7px 12px;border-radius:4px;cursor:pointer;font:600 16px/1 var(--display);letter-spacing:.02em;text-decoration:none;display:inline-block}
+.btn:hover{background:var(--ink);color:var(--bg)}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn.primary:hover{background:var(--focus);border-color:var(--focus);color:#fff}
+
+.id{padding-block:34px 18px;display:grid;gap:12px}
+.id h1{font-weight:700;font-size:clamp(46px,9vw,96px);letter-spacing:-.01em;line-height:.9}
+.id .role{font:600 clamp(20px,3vw,28px)/1.2 var(--display);letter-spacing:.03em;color:var(--l-web)}
+.contact{display:flex;flex-wrap:wrap;gap:6px 18px;font:500 14px/1.5 var(--mono);color:var(--muted)}
+.contact a{text-decoration:none;border-bottom:1px solid var(--rule)} .contact a:hover{color:var(--ink);border-color:var(--ink)}
+.contact button{all:unset;cursor:pointer;border-bottom:1px solid var(--rule)} .contact button:hover{color:var(--ink)}
+
+.cols{display:grid;gap:8px 32px;grid-template-columns:minmax(0,1fr);padding-bottom:60px}
+@media (min-width:900px){
+  .cols{grid-template-columns:minmax(0,1fr) 320px;grid-template-areas:"res skl" "exp skl" "pro edu"}
+  #resumen{grid-area:res} #skl{grid-area:skl;position:sticky;top:64px;align-self:start}
+  #experiencia{grid-area:exp} #proyectos{grid-area:pro} #edu{grid-area:edu}
+}
+section{padding-block:22px}
+.sec-h{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.sec-h h2{font-size:clamp(28px,4vw,40px);font-weight:700}
+.sec-h::before{content:"";width:16px;height:16px;border-radius:50%;border:4px solid var(--ink);background:var(--surface);flex:none}
+
+/* experiencia como línea */
+.job{border-left:8px solid var(--l-web);padding-left:20px;margin-left:7px;position:relative}
+.job::before{content:"";position:absolute;left:-14px;top:2px;width:20px;height:20px;border-radius:50%;background:var(--surface);border:4px solid var(--ink)}
+.job h3{font-size:28px;font-weight:600}
+.job .org{color:var(--muted);margin-top:2px}
+.job .when{font:500 13px/1 var(--mono);color:var(--muted);margin-top:8px}
+.jlinks{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px}
+.jlinks a{font:600 15px/1 var(--display);letter-spacing:.02em;border:2px solid var(--ink);border-radius:4px;padding:6px 10px;text-decoration:none;background:var(--surface)}
+.jlinks a:hover{background:var(--ink);color:var(--bg)}
+ul.list{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:10px}
+.item{border:2px solid var(--rule);background:var(--surface);border-radius:6px;padding:12px 14px;transition:opacity .2s,border-color .2s}
+.item p b{font-weight:600}
+.item h3{font-size:23px;font-weight:600;margin-bottom:4px}
+.plk{margin-top:6px;font:500 14px/1.4 var(--mono)}
+.kts{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px}
+.kt{font:500 12px/1 var(--mono);border:1px solid var(--rule);background:transparent;border-radius:999px;padding:4px 8px;cursor:pointer;color:var(--muted)}
+.kt:hover{border-color:var(--ink);color:var(--ink)}
+.kt[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+body.filtering .item{opacity:.3}
+body.filtering .item.hit{opacity:1;border-color:var(--ink);box-shadow:4px 4px 0 var(--ink)}
+.projs{display:grid;gap:10px;grid-template-columns:1fr;list-style:none;margin:0;padding:0}
+@media (min-width:620px){.projs{grid-template-columns:1fr 1fr}}
+
+/* panel de tecnologías */
+.panel{border:2px solid var(--ink);background:var(--surface);border-radius:6px;padding:16px}
+.panel > h2{font-size:28px;font-weight:700;margin-bottom:4px}
+.hint{color:var(--muted);font-size:15px;margin-bottom:12px;min-height:3em}
+.hint button{all:unset;cursor:pointer;text-decoration:underline;margin-left:6px;font-weight:600}
+.grp{margin-top:12px}
+.grp h3{font:600 15px/1 var(--display);letter-spacing:.06em;text-transform:uppercase;display:flex;align-items:center;gap:8px;margin-bottom:6px;color:var(--muted)}
+.grp h3::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--c)}
+.sks{display:flex;flex-wrap:wrap;gap:6px}
+.sk{display:inline-flex;align-items:center;gap:6px;font:500 13px/1 var(--mono);border:2px solid var(--c);background:transparent;border-radius:999px;padding:6px 10px;cursor:pointer}
+.sk:hover{background:color-mix(in srgb,var(--c) 18%,transparent)}
+.sk[aria-pressed="true"]{background:var(--c);color:var(--bg)}
+.sk .n{font-weight:500;opacity:.7}
+.edu p{margin-bottom:10px}
+.edu .mut{color:var(--muted)}
+.dl{display:grid;gap:8px;margin-top:6px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:4px;font:500 14px/1 var(--mono);opacity:0;pointer-events:none;transition:opacity .2s}
+.toast.on{opacity:1}
+
+@media print{
+  @page{margin:14mm}
+  :root,:root[data-theme="dark"]{--bg:#fff;--surface:#fff;--ink:#000;--muted:#333;--rule:#bbb;color-scheme:light}
+  body{font-size:10.5pt;line-height:1.4}
+  .top,.hint,.kts,.jlinks,.dl,.acts,.toast{display:none!important}
+  .cols{display:block} #skl{position:static}
+  .panel{border:0;padding:0}
+  .sk{border:0;padding:0 8px 0 0;font-size:9.5pt} .sk .n{display:none}
+  .item{break-inside:avoid;border:0;border-bottom:1px solid #ccc;border-radius:0;padding:6px 0}
+  body.filtering .item{opacity:1}
+  .projs{display:block}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main" data-en="Skip to content">Saltar al contenido</a>
+<div class="wrap">
+<header class="top">
+  <a class="brand" href="../"><span class="roundel" aria-hidden="true">ERL</span><span data-en="← Portfolio">← Portafolio</span></a>
+  <div class="acts">
+    <a class="btn primary" id="pdf" download href="Enrique-Renteria-Leon-CV-ES.pdf" data-es="Enrique-Renteria-Leon-CV-ES.pdf" data-enh="Enrique-Renteria-Leon-CV-EN.pdf" data-en="Download PDF">Descargar PDF</a>
+    <button class="btn" type="button" id="print" data-en="Print">Imprimir</button>
+    <button class="btn" type="button" id="theme" data-en="Theme">Tema</button>
+    <button class="btn" type="button" id="lang" aria-label="Idioma">EN</button>
+  </div>
+</header>
+
+<main id="main">
+<div class="id">
+  <h1>Enrique Rentería León</h1>
+  <div class="role" data-en="Software Engineering student · Java · Spring Boot · React · Android">Ingeniero de Software · Java · Spring Boot · React · Android</div>
+  <div class="contact">
+    <span data-en="Metepec, State of Mexico">Metepec, Estado de México</span>
+    <button type="button" id="mail" data-mail="leonenriquer201@gmail.com">leonenriquer201@gmail.com</button>
+    <a href="https://github.com/enriqueleondev" target="_blank" rel="noopener">github.com/enriqueleondev</a>
+    <a href="https://www.linkedin.com/in/enrique-renteria-le%C3%B3n-71ba393b5" target="_blank" rel="noopener">linkedin.com/in/enrique-renteria-león</a>
+    <a href="../">enriqueleondev.github.io</a>
+  </div>
+</div>
+
+<div class="cols">
+<section id="resumen">
+  <div class="sec-h"><h2 data-en="Summary">Perfil</h2></div>
+  <p data-en="8th-semester Software Engineering student (UAEM) looking for a first position as a Java Trainee or junior full-stack developer. I designed, built and deployed Rutario, a school-internship attendance system with photo and GPS evidence that runs in production: API, web app, mobile app and operation on my own server. I care about software that leaves the lab: real users, bad connections, personal data and servers that need maintenance.">Estudiante de 8.º semestre de Ingeniería en Software (UAEM) en busca de su primera posición como Java Trainee o desarrollador full-stack junior. Diseñé, construí y desplegué Rutario, un sistema de control de prácticas escolares con foto y GPS que está en producción: API, webapp, app móvil y operación en servidor propio. Me interesa el software que sale del laboratorio: usuarios reales, conexiones malas, datos personales y servidores que hay que mantener.</p>
+</section>
+
+<aside id="skl" class="panel" aria-label="Tecnologías" data-en-label="Technologies">
+  <h2 data-en="Technologies">Tecnologías</h2>
+  <p class="hint" id="hint" aria-live="polite"></p>
+  <div class="grp" style="--c:var(--l-web)"><h3 data-en="Backend">Backend</h3><div class="sks"><button type="button" class="sk" data-k="java" aria-pressed="false"><span data-en="Java">Java</span><b class="n" aria-hidden="true"></b></button><button type="button" class="sk" data-k="spring" aria-pressed="false"><span data-en="Spring Boot">Spring Boot</span><b class="n" aria-hidden="true"></b></button><button type="button" class="sk" data-k="rest" aria-pressed="false"><span data-en="REST APIs">API REST</span><b class="n" aria-hidden="true"></b></button><button type="button" class="sk" data-k="jwt" aria-pressed="false"><span data-en="JWT">JWT</span><b class="n" aria-hidden="true"></b></button><button type="button" class="sk" data-k="laravel" aria-pressed="false"><span data-en="Laravel">Laravel</span><b class="n" aria-hidden="true"></b></button><button type="button" class="sk" data-k="flyway" aria-pressed="false"><span data-en="Flyway">Flyway</span><b class="n" aria-hidden="true"></b></button></div></div><div class="grp" style="--c:var(--l-desk)"><h3 data-en="Web &amp; mobile">Web y móvil</h3><div class="sks"><button type="button" class="sk" data-k="react" aria-pressed="false"><span data-en="React">React</span><b class="n" aria-hidden="true"></b></button><button type="button" class="sk" data-k="ts" aria-pressed="false"><span data-en="TypeScript">TypeScript</span><b class="n" aria-hidden="true"></b></button><button type="button" class="sk" data-k="angular" aria-pressed="false"><span data-en="Angular">Angular</span><b class="n" aria-hidden="true"></b></button><button type="button" class="sk" data-k="kotlin" aria-pressed="false"><span data-en="Kotlin">Kotlin</span><b class="n" aria-hidden="true"></b></button><button type="button" class="sk" data-k="compose" aria-pressed="false"><span data-en="Jetpack Compose">Jetpack Compose</span><b class="n" aria-hidden="true"></b></button></div></div><div class="grp" style="--c:var(--l-data)"><h3 data-en="Data">Datos</h3><div class="sks"><button type="button" class="sk" data-k="postgres" aria-pressed="false"><span data-en="PostgreSQL">PostgreSQL</span><b class="n" aria-hidden="true"></b></button><button type="button" class="sk" data-k="mysql" aria-pressed="false"><span data-en="MySQL">MySQL</span><b class="n" aria-hidden="true"></b></button><button type="button" class="sk" data-k="hop" aria-pressed="false"><span data-en="Apache Hop">Apache Hop</span><b class="n" aria-hidden="true"></b></button></div></div><div class="grp" style="--c:var(--l-infra)"><h3 data-en="Operations">Operación</h3><div class="sks"><button type="button" class="sk" data-k="docker" aria-pressed="false"><span data-en="Docker">Docker</span><b class="n" aria-hidden="true"></b></button><button type="button" class="sk" data-k="caddy" aria-pressed="false"><span data-en="Caddy">Caddy</span><b class="n" aria-hidden="true"></b></button><button type="button" class="sk" data-k="linux" aria-pressed="false"><span data-en="Linux">Linux</span><b class="n" aria-hidden="true"></b></button><button type="button" class="sk" data-k="git" aria-pressed="false"><span data-en="Git">Git</span><b class="n" aria-hidden="true"></b></button><button type="button" class="sk" data-k="appsec" aria-pressed="false"><span data-en="Application security">Seguridad de aplicaciones</span><b class="n" aria-hidden="true"></b></button></div></div><div class="grp" style="--c:var(--l-ai)"><h3 data-en="Other">Otros</h3><div class="sks"><button type="button" class="sk" data-k="python" aria-pressed="false"><span data-en="Python">Python</span><b class="n" aria-hidden="true"></b></button><button type="button" class="sk" data-k="opencv" aria-pressed="false"><span data-en="OpenCV">OpenCV</span><b class="n" aria-hidden="true"></b></button><button type="button" class="sk" data-k="javafx" aria-pressed="false"><span data-en="JavaFX">JavaFX</span><b class="n" aria-hidden="true"></b></button><button type="button" class="sk" data-k="mpi" aria-pressed="false"><span data-en="OpenMPI">OpenMPI</span><b class="n" aria-hidden="true"></b></button><button type="button" class="sk" data-k="sig" aria-pressed="false"><span data-en="GIS">SIG</span><b class="n" aria-hidden="true"></b></button></div></div>
+</aside>
+
+<section id="experiencia">
+  <div class="sec-h"><h2 data-en="Experience">Experiencia</h2></div>
+  <div class="job">
+    <h3 data-en="Software developer (social service)">Desarrollador de software (servicio social)</h3>
+    <p class="org" data-en="CBT Lic. Julián Díaz Arias (technical high school), Chapultepec, State of Mexico">CBT Lic. Julián Díaz Arias, Chapultepec, Estado de México</p>
+    <p class="when" data-en="Jun 2026 – Nov 2026">jun 2026 – nov 2026</p>
+    <div class="jlinks">
+      <a href="https://enriqueleondev.github.io/rutario/" target="_blank" rel="noopener" data-en="Live demo">Demo en vivo</a>
+      <a href="https://github.com/enriqueleondev/rutario" target="_blank" rel="noopener" data-en="Repository">Repositorio</a>
+      <a href="../#caso" data-en="Case study">Caso de estudio</a>
+    </div>
+    <ul class="list"><li class="item" data-keys="java spring postgres react kotlin docker"><p data-en="Designed, built and deployed &lt;b&gt;Rutario&lt;/b&gt;, an internship attendance system with photo and GPS evidence, designed for about 400 students in internships.">Diseñé, desarrollé y desplegué <b>Rutario</b>, sistema de control de prácticas con evidencia por foto y GPS, pensado para unos 400 alumnos en prácticas.</p><div class="kts"><button type="button" class="kt" data-k="java" aria-pressed="false"><span data-en="Java">Java</span></button><button type="button" class="kt" data-k="spring" aria-pressed="false"><span data-en="Spring Boot">Spring Boot</span></button><button type="button" class="kt" data-k="postgres" aria-pressed="false"><span data-en="PostgreSQL">PostgreSQL</span></button><button type="button" class="kt" data-k="react" aria-pressed="false"><span data-en="React">React</span></button><button type="button" class="kt" data-k="kotlin" aria-pressed="false"><span data-en="Kotlin">Kotlin</span></button><button type="button" class="kt" data-k="docker" aria-pressed="false"><span data-en="Docker">Docker</span></button></div></li><li class="item" data-keys="java spring rest postgres flyway react ts kotlin compose"><p data-en="REST API with Java, Spring Boot and PostgreSQL, with Flyway migrations; PWA web app with React and TypeScript; offline-first Android app with Kotlin, Jetpack Compose, Room, CameraX and WorkManager (sync queue, mock-location rejection).">API REST con Java, Spring Boot y PostgreSQL, con migraciones Flyway; webapp PWA con React y TypeScript; app Android offline-first con Kotlin, Jetpack Compose, Room, CameraX y WorkManager (cola de sincronización, rechazo de ubicación simulada).</p><div class="kts"><button type="button" class="kt" data-k="java" aria-pressed="false"><span data-en="Java">Java</span></button><button type="button" class="kt" data-k="spring" aria-pressed="false"><span data-en="Spring Boot">Spring Boot</span></button><button type="button" class="kt" data-k="rest" aria-pressed="false"><span data-en="REST APIs">API REST</span></button><button type="button" class="kt" data-k="postgres" aria-pressed="false"><span data-en="PostgreSQL">PostgreSQL</span></button><button type="button" class="kt" data-k="flyway" aria-pressed="false"><span data-en="Flyway">Flyway</span></button><button type="button" class="kt" data-k="react" aria-pressed="false"><span data-en="React">React</span></button><button type="button" class="kt" data-k="ts" aria-pressed="false"><span data-en="TypeScript">TypeScript</span></button><button type="button" class="kt" data-k="kotlin" aria-pressed="false"><span data-en="Kotlin">Kotlin</span></button><button type="button" class="kt" data-k="compose" aria-pressed="false"><span data-en="Jetpack Compose">Jetpack Compose</span></button></div></li><li class="item" data-keys="java spring rest"><p data-en="Six roles with permissions, Excel and Word reports, password resets and permanent deletion with access control.">Seis roles con permisos, reportes en Excel y Word, restablecimiento de contraseñas y borrado definitivo con control de acceso.</p><div class="kts"><button type="button" class="kt" data-k="java" aria-pressed="false"><span data-en="Java">Java</span></button><button type="button" class="kt" data-k="spring" aria-pressed="false"><span data-en="Spring Boot">Spring Boot</span></button><button type="button" class="kt" data-k="rest" aria-pressed="false"><span data-en="REST APIs">API REST</span></button></div></li><li class="item" data-keys="jwt appsec spring"><p data-en="Security and privacy review: revocable JWT sessions (&lt;i&gt;token_version&lt;/i&gt;), login rate limiting, forced password change, versioned privacy notice, 365-day evidence purge, security headers and encrypted backups.">Revisión de seguridad y privacidad: sesiones revocables con JWT (<i>token_version</i>), límite de intentos, cambio obligatorio de contraseña, aviso de privacidad versionado, purga de evidencia a 365 días, cabeceras de seguridad y respaldos cifrados.</p><div class="kts"><button type="button" class="kt" data-k="jwt" aria-pressed="false"><span data-en="JWT">JWT</span></button><button type="button" class="kt" data-k="appsec" aria-pressed="false"><span data-en="Application security">Seguridad de aplicaciones</span></button><button type="button" class="kt" data-k="spring" aria-pressed="false"><span data-en="Spring Boot">Spring Boot</span></button></div></li><li class="item" data-keys="docker caddy linux"><p data-en="Deployed with Docker Compose and HTTPS through Caddy on a VPS; migrated to a new server with its own domain and upgraded nginx after a CVE.">Despliegue con Docker Compose y HTTPS con Caddy en un VPS; migración a un servidor nuevo con dominio propio y actualización de nginx por un CVE.</p><div class="kts"><button type="button" class="kt" data-k="docker" aria-pressed="false"><span data-en="Docker">Docker</span></button><button type="button" class="kt" data-k="caddy" aria-pressed="false"><span data-en="Caddy">Caddy</span></button><button type="button" class="kt" data-k="linux" aria-pressed="false"><span data-en="Linux">Linux</span></button></div></li><li class="item" data-keys="laravel git"><p data-en="Built the school&#x27;s institutional website with Laravel 12 and Filament 4. Work with &lt;i&gt;feature/*&lt;/i&gt; and &lt;i&gt;fix/*&lt;/i&gt; branches merged by pull request.">Sitio institucional del plantel con Laravel 12 y Filament 4. Trabajo con ramas <i>feature/*</i> y <i>fix/*</i> integradas por pull request.</p><div class="kts"><button type="button" class="kt" data-k="laravel" aria-pressed="false"><span data-en="Laravel">Laravel</span></button><button type="button" class="kt" data-k="git" aria-pressed="false"><span data-en="Git">Git</span></button></div></li></ul>
+  </div>
+</section>
+
+<section id="proyectos">
+  <div class="sec-h"><h2 data-en="Projects">Proyectos</h2></div>
+  <ul class="projs"><li class="item proj" data-keys="java spring rest docker"><h3 data-en="Geofence check-in API">API de check-in con geocerca</h3><p data-en="Original Spring Boot service that decides whether a phone check-in can be trusted: geofence, GPS accuracy, mock location and offline records. Idempotent API, framework-free domain, tests and CI. Open source.">Servicio original en Spring Boot que decide si un registro de asistencia desde el celular es confiable: geocerca, precisión del GPS, ubicación simulada y registros offline. API idempotente, dominio sin framework, pruebas y CI. Código abierto.</p><p class="plk"><a href="https://github.com/enriqueleondev/geofence-checkin-service" target="_blank" rel="noopener" data-en="Repository on GitHub">Repositorio en GitHub</a></p><div class="kts"><button type="button" class="kt" data-k="java" aria-pressed="false"><span data-en="Java">Java</span></button><button type="button" class="kt" data-k="spring" aria-pressed="false"><span data-en="Spring Boot">Spring Boot</span></button><button type="button" class="kt" data-k="rest" aria-pressed="false"><span data-en="REST APIs">API REST</span></button><button type="button" class="kt" data-k="docker" aria-pressed="false"><span data-en="Docker">Docker</span></button></div></li><li class="item proj" data-keys="java spring jwt"><h3 data-en="UniConnect">UniConnect</h3><p data-en="LinkedIn-style social platform with Java, Spring Boot, JWT, WebSockets, Cloudinary and SendGrid.">Red social estilo LinkedIn con Java, Spring Boot, JWT, WebSockets, Cloudinary y SendGrid.</p><div class="kts"><button type="button" class="kt" data-k="java" aria-pressed="false"><span data-en="Java">Java</span></button><button type="button" class="kt" data-k="spring" aria-pressed="false"><span data-en="Spring Boot">Spring Boot</span></button><button type="button" class="kt" data-k="jwt" aria-pressed="false"><span data-en="JWT">JWT</span></button></div></li><li class="item proj" data-keys="java spring angular"><h3 data-en="NexusTech University">NexusTech University</h3><p data-en="Course platform with Spring Boot and Angular; Cloudinary, video upload and Thymeleaf emails.">Plataforma de cursos con Spring Boot y Angular; Cloudinary, subida de video y correos con Thymeleaf.</p><div class="kts"><button type="button" class="kt" data-k="java" aria-pressed="false"><span data-en="Java">Java</span></button><button type="button" class="kt" data-k="spring" aria-pressed="false"><span data-en="Spring Boot">Spring Boot</span></button><button type="button" class="kt" data-k="angular" aria-pressed="false"><span data-en="Angular">Angular</span></button></div></li><li class="item proj" data-keys="react laravel"><h3 data-en="RentAutos">RentAutos</h3><p data-en="Car rental with React, Vite and Laravel Sanctum; Google login and a pre-booking flow.">Renta de autos con React, Vite y Laravel Sanctum; login con Google y flujo de prereserva.</p><div class="kts"><button type="button" class="kt" data-k="react" aria-pressed="false"><span data-en="React">React</span></button><button type="button" class="kt" data-k="laravel" aria-pressed="false"><span data-en="Laravel">Laravel</span></button></div></li><li class="item proj" data-keys="laravel mysql"><h3 data-en="Language revalidation (UAEM)">Revalidación de lenguas (UAEM)</h3><p data-en="Laravel 12 and Livewire, roles, official-letter folios and PDF rulings. In development.">Laravel 12 y Livewire, roles, folios de oficios y dictámenes en PDF. En desarrollo.</p><div class="kts"><button type="button" class="kt" data-k="laravel" aria-pressed="false"><span data-en="Laravel">Laravel</span></button><button type="button" class="kt" data-k="mysql" aria-pressed="false"><span data-en="MySQL">MySQL</span></button></div></li><li class="item proj" data-keys="postgres hop docker"><h3 data-en="Click.com datamart">Click.com datamart</h3><p data-en="Kimball star schema with PostgreSQL and Apache Hop on Docker.">Esquema estrella (Kimball) con PostgreSQL y Apache Hop en Docker.</p><div class="kts"><button type="button" class="kt" data-k="postgres" aria-pressed="false"><span data-en="PostgreSQL">PostgreSQL</span></button><button type="button" class="kt" data-k="hop" aria-pressed="false"><span data-en="Apache Hop">Apache Hop</span></button><button type="button" class="kt" data-k="docker" aria-pressed="false"><span data-en="Docker">Docker</span></button></div></li></ul>
+</section>
+
+<section id="edu" class="edu">
+  <div class="sec-h"><h2 data-en="Education">Educación</h2></div>
+  <p data-en="&lt;b&gt;B.Sc. in Software Engineering&lt;/b&gt;, 8th semester&lt;br&gt;CU UAEM Tianguistenco, UAEMex"><b>Ingeniería en Software</b>, 8.º semestre<br>CU UAEM Tianguistenco, UAEMex</p>
+  <p class="mut" data-en="GIS, cartography and remote sensing courses at the Faculty of Geography, UAEMex.">Cursos de SIG, cartografía y teledetección en la Facultad de Geografía, UAEMex.</p>
+  <div class="sec-h" style="margin-top:18px"><h2 data-en="Languages">Idiomas</h2></div>
+  <p data-en="Spanish · English (B1)">Español · Inglés (B1)</p>
+</section>
+</div>
+</main>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function(){
+'use strict';
+var STR={"hint": ["Toca una tecnología para ver dónde la usé.", "Tap a technology to see where I used it."], "match": ["coincidencias con", "matches for"], "none": ["Sin coincidencias para", "No matches for"], "clear": ["Quitar filtro", "Clear filter"], "copied": ["Correo copiado", "Email copied"]};
+var SK={"java": ["Java", "Java"], "spring": ["Spring Boot", "Spring Boot"], "rest": ["API REST", "REST APIs"], "jwt": ["JWT", "JWT"], "laravel": ["Laravel", "Laravel"], "flyway": ["Flyway", "Flyway"], "react": ["React", "React"], "ts": ["TypeScript", "TypeScript"], "angular": ["Angular", "Angular"], "kotlin": ["Kotlin", "Kotlin"], "compose": ["Jetpack Compose", "Jetpack Compose"], "postgres": ["PostgreSQL", "PostgreSQL"], "mysql": ["MySQL", "MySQL"], "hop": ["Apache Hop", "Apache Hop"], "docker": ["Docker", "Docker"], "caddy": ["Caddy", "Caddy"], "linux": ["Linux", "Linux"], "git": ["Git", "Git"], "appsec": ["Seguridad de aplicaciones", "Application security"], "python": ["Python", "Python"], "opencv": ["OpenCV", "OpenCV"], "javafx": ["JavaFX", "JavaFX"], "mpi": ["OpenMPI", "OpenMPI"], "sig": ["SIG", "GIS"]};
+var lang='es', active=null;
+function store(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+function load(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function $(s,r){return (r||document).querySelector(s)}
+function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))}
+function t(k){return STR[k][lang==='en'?1:0]}
+
+/* idioma */
+function applyLang(l){
+  lang=l; document.documentElement.lang=l;
+  $$('[data-en]').forEach(function(el){
+    if(el.dataset.es===undefined) el.dataset.es=el.innerHTML;
+    el.innerHTML = l==='en' ? el.dataset.en : el.dataset.es;
+  });
+  $$('[data-en-label]').forEach(function(el){
+    if(el.dataset.esLabel===undefined) el.dataset.esLabel=el.getAttribute('aria-label')||'';
+    el.setAttribute('aria-label', l==='en'?el.dataset.enLabel:el.dataset.esLabel);
+  });
+  var pdf=$('#pdf'); pdf.setAttribute('href', l==='en'?pdf.dataset.enh:'Enrique-Renteria-Leon-CV-ES.pdf');
+  $('#lang').textContent = l==='en'?'ES':'EN';
+  document.title = l==='en' ? 'Enrique Rentería León – Interactive résumé' : 'Enrique Rentería León – CV interactivo';
+  renderHint();
+}
+/* el atributo data-es del PDF no es contenido: evitarlo en el barrido */
+$('#pdf').removeAttribute('data-es');
+
+/* tema */
+function effectiveDark(){var th=document.documentElement.dataset.theme; return th? th==='dark' : matchMedia('(prefers-color-scheme: dark)').matches}
+$('#theme').addEventListener('click',function(){var v=effectiveDark()?'light':'dark'; document.documentElement.dataset.theme=v; store('erl-theme',v)});
+
+/* filtro por tecnología */
+function setActive(k){
+  active = (active===k) ? null : k;
+  if(!SK[active]) active=null;
+  sync(); 
+  try{history.replaceState(null,'',active?'#k='+active:location.pathname+location.search)}catch(e){}
+}
+function sync(){
+  document.body.classList.toggle('filtering',!!active);
+  $$('.sk,.kt').forEach(function(b){b.setAttribute('aria-pressed', String(b.dataset.k===active))});
+  var hits=0;
+  $$('.item').forEach(function(it){
+    var h=!!active && it.dataset.keys.split(' ').indexOf(active)>-1;
+    it.classList.toggle('hit',h); if(h) hits++;
+  });
+  renderHint(hits);
+}
+function renderHint(h){
+  var el=$('#hint');
+  if(h===undefined) h=$$('.item.hit').length;
+  if(!active){ el.textContent=t('hint'); return; }
+  var name=SK[active][lang==='en'?1:0];
+  el.innerHTML='';
+  el.appendChild(document.createTextNode(h? (h+' '+t('match')+' '+name) : (t('none')+' '+name)));
+  var b=document.createElement('button'); b.type='button'; b.textContent=t('clear'); b.onclick=function(){setActive(active)};
+  el.appendChild(b);
+}
+/* conteo por tecnología */
+$$('.sk').forEach(function(b){
+  var n=$$('.item').filter(function(it){return it.dataset.keys.split(' ').indexOf(b.dataset.k)>-1}).length;
+  $('.n',b).textContent=n;
+});
+document.addEventListener('click',function(e){
+  var b=e.target.closest&&e.target.closest('.sk,.kt'); if(b) setActive(b.dataset.k);
+});
+document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&active) setActive(active); });
+
+/* correo e imprimir */
+function toast(m){var el=$('#toast'); el.textContent=m; el.classList.add('on'); setTimeout(function(){el.classList.remove('on')},1600)}
+$('#mail').addEventListener('click',function(){
+  var m=this.dataset.mail;
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(m).then(function(){toast(t('copied'))},function(){location.href='mailto:'+m})}
+  else location.href='mailto:'+m;
+});
+$('#print').addEventListener('click',function(){window.print()});
+$('#lang').addEventListener('click',function(){var l=lang==='en'?'es':'en'; store('erl-lang',l); applyLang(l)});
+
+/* arranque */
+try{var th=load('erl-theme'); if(th==='light'||th==='dark') document.documentElement.dataset.theme=th}catch(e){}
+var sl=load('erl-lang');
+var start = (sl==='en'||sl==='es') ? sl : ((navigator.language||'').toLowerCase().indexOf('en')===0?'en':'es');
+applyLang(start);
+var m=/^#k=([a-z0-9]+)$/.exec(location.hash); if(m&&SK[m[1]]){active=m[1]; sync()} else renderHint(0);
+})();
+</script>
+</body>
+</html>

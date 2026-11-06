@@ -313,6 +313,13 @@ img{max-width:100%}
         <p data-en="Course specialization platform with Spring Boot and Angular. I integrated Cloudinary for images, video upload and Thymeleaf email templates.">Plataforma de especialización en cursos con Spring Boot y Angular. Integré Cloudinary para imágenes, subida de video y correos con plantillas Thymeleaf.</p>
         <p class="pk">Spring Boot · Angular · JWT · Cloudinary · Thymeleaf</p>
       </article>
+      <article class="pitem" id="p-geofence">
+        <h3 data-en="Geofence check-in API">API de check-in con geocerca</h3>
+        <p class="pst" data-en="Open source">Código abierto</p>
+        <p data-en="Original Spring Boot service that decides whether a phone check-in can be trusted: haversine geofence, GPS accuracy, mock location and the age of an offline-queued record. Idempotent API so an offline queue can retry without duplicates. Framework-free domain, unit and API tests, CI and Docker.">Servicio original en Spring Boot que decide si un registro de asistencia desde el celular es confiable: geocerca con haversine, precisión del GPS, ubicación simulada y antigüedad del registro offline. API idempotente para que una cola offline reintente sin duplicar. Dominio sin framework, pruebas unitarias y de API, CI y Docker.</p>
+        <p class="pk">Java · Spring Boot · JUnit 5 · GitHub Actions · Docker</p>
+        <p class="plk"><a href="https://github.com/enriqueleondev/geofence-checkin-service" target="_blank" rel="noopener" data-en="Repository">Repositorio</a></p>
+      </article>
       <article class="pitem" id="p-reval">
         <h3 data-en="Language revalidation">Revalidación de lenguas</h3>
         <p class="pst" data-en="In development">En desarrollo</p>
@@ -611,6 +618,10 @@ const ST=[
   k:['Spring Boot','Angular','JWT','Cloudinary','Thymeleaf'],
   es:'Plataforma de especialización en cursos con Spring Boot y Angular. Integré Cloudinary para imágenes, subida de video y correos con plantillas Thymeleaf.',
   en:'Course specialization platform with Spring Boot and Angular. I integrated Cloudinary for images, video upload and Thymeleaf email templates.'},
+ {id:'geofence',n:T('API de check-in con geocerca','Geofence check-in API'),l:['web'],x:750,y:190,lp:'u',s:'oss',repo:'https://github.com/enriqueleondev/geofence-checkin-service',
+  k:['Java','Spring Boot','JUnit 5','GitHub Actions','Docker'],
+  es:'Servicio original en Spring Boot que decide si un registro de asistencia desde el celular es confiable: geocerca con haversine, precisión del GPS, ubicación simulada y antigüedad del registro offline. API idempotente para que una cola offline reintente sin duplicar. Dominio sin framework, pruebas unitarias y de API, CI y Docker.',
+  en:'Original Spring Boot service that decides whether a phone check-in can be trusted: haversine geofence, GPS accuracy, mock location and the age of an offline-queued record. Idempotent API so an offline queue can retry without duplicates. Framework-free domain, unit and API tests, CI and Docker.'},
  {id:'reval',n:T('Revalidación de lenguas','Language revalidation'),l:['web'],x:860,y:190,lp:'d',s:'dev',
   k:['Laravel','Livewire','MySQL','GraphQL','PHP'],
   es:'Sistema para digitalizar la revalidación de lenguas en la universidad: Laravel 12, Livewire, roles, bandejas por rol, folios de oficios y dictámenes en PDF. Se integra con servicios institucionales de login y consulta de alumnos. En desarrollo.',
@@ -656,14 +667,14 @@ const ST=[
   es:'Control de motor a pasos con PIC18F4550 en ensamblador: teclado matricial 4×4, LCD y puente L293D. Depuré pines flotantes y diferencias entre Proteus y el hardware físico.',
   en:'Stepper motor control on a PIC18F4550 in assembly: 4×4 matrix keypad, LCD and L293D driver. I debugged floating pins and gaps between Proteus and real hardware.'}
 ];
-const STATUS={prod:['En producción','In production'],dev:['En desarrollo','In development'],acad:['Proyecto académico','Course project']};
+const STATUS={prod:['En producción','In production'],dev:['En desarrollo','In development'],acad:['Proyecto académico','Course project'],oss:['Código abierto','Open source']};
 const LABS={checkin:['Registro Rutario','Rutario check-in'],ahp:['Índice Saaty (SIG)','Saaty index (GIS)'],perceptron:['Perceptrón','Perceptron'],cluster:['Primos en Beowulf','Beowulf primes']};
 const byId=Object.fromEntries(ST.map(s=>[s.id,s]));
 const lineName=id=>{const l=LINES.find(x=>x.id===id);return T(l.es,l.en)};
 let sel='rutario', skill=null, lineF=null;
 
 /* ---------- mapa ---------- */
-function stName(s){ return s.id==='cbt'?T('Sitio web CBT','CBT website'):s.id==='reval'?T('Revalidación de lenguas','Language revalidation'):s.id==='saaty'?T('Índice de urbanización','Urbanization index'):s.id==='iva'?T('Vulnerabilidad ante asaltos','Assault vulnerability'):s.id==='beowulf'?T('Cluster Beowulf','Beowulf cluster'):s.id==='perceptron'?T('Perceptrón','Perceptron'):s.id==='people'?T('Conteo de personas','People counting'):s.n; }
+function stName(s){ return s.id==='cbt'?T('Sitio web CBT','CBT website'):s.id==='geofence'?T('API de check-in con geocerca','Geofence check-in API'):s.id==='reval'?T('Revalidación de lenguas','Language revalidation'):s.id==='saaty'?T('Índice de urbanización','Urbanization index'):s.id==='iva'?T('Vulnerabilidad ante asaltos','Assault vulnerability'):s.id==='beowulf'?T('Cluster Beowulf','Beowulf cluster'):s.id==='perceptron'?T('Perceptrón','Perceptron'):s.id==='people'?T('Conteo de personas','People counting'):s.n; }
 function matches(s){ return (!skill||s.k.includes(skill)) && (!lineF||s.l.includes(lineF)); }
 function renderMap(){
   let h='';

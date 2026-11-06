@@ -1,13 +1,24 @@
 <!doctype html>
 <html lang="es">
 <head>
-<title>Enrique Rentería León – Ingeniero de Software</title>
 <meta charset="utf-8">
+<title>Enrique Rentería León – Ingeniero de Software</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="description" content="Ingeniero de Software | Java · Spring Boot · React · Android | Rutario en producción · Docker · PostgreSQL | UAEM">
+<meta name="author" content="Enrique Rentería León">
+<link rel="canonical" href="https://enriqueleondev.github.io/">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Enrique Rentería León">
+<meta property="og:url" content="https://enriqueleondev.github.io/">
+<meta property="og:locale" content="es_MX">
 <meta property="og:title" content="Enrique Rentería León – Ingeniero de Software">
 <meta property="og:description" content="Ingeniero de Software | Java · Spring Boot · React · Android | Rutario en producción · Docker · PostgreSQL | UAEM">
+<meta property="og:image" content="https://enriqueleondev.github.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Enrique Rentería León, Ingeniero de Software: Java, Spring Boot, React y Android">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Enrique Rentería León","alternateName":"Jack","jobTitle":"Ingeniero de Software","url":"https://enriqueleondev.github.io/","email":"mailto:leonenriquer201@gmail.com","image":"https://enriqueleondev.github.io/og.png","sameAs":["https://github.com/enriqueleondev","https://www.linkedin.com/in/enrique-renteria-le%C3%B3n-71ba393b5"],"knowsAbout":["Java","Spring Boot","React","TypeScript","Kotlin","Jetpack Compose","PostgreSQL","Docker"]}</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2711%27 fill=%27%23F4F7F9%27 stroke=%27%230F1B25%27 stroke-width=%275%27/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -195,6 +206,37 @@ footer{padding-block:30px 44px;border-top:2px solid var(--ink);color:var(--muted
 }
 [hidden]{display:none!important}
 img{max-width:100%}
+
+/* acciones del inicio */
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.cta .btn{display:inline-block;text-decoration:none;padding:12px 18px;font-size:19px}
+/* lista de proyectos: versión de texto, también para lectores sin JavaScript */
+.plist{margin-top:26px;border:2px solid var(--ink);border-radius:4px;background:var(--surface)}
+.plist>summary{cursor:pointer;padding:12px 16px;font:600 20px/1.1 var(--display);letter-spacing:.02em;list-style:none}
+.plist>summary::-webkit-details-marker{display:none}
+.plist>summary::before{content:"+ ";font-family:var(--mono)}
+.plist[open]>summary::before{content:"– "}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));border-top:2px solid var(--ink)}
+.pitem{padding:16px 18px;border-bottom:1px solid var(--rule);display:grid;gap:6px;align-content:start}
+.pitem h3{font-size:26px}
+.pitem p{font-size:15.5px}
+.pitem .pst{font:500 12px/1 var(--mono);color:var(--muted)}
+.pitem .pk{font:400 13px/1.5 var(--mono);color:var(--muted)}
+.pitem .plk a{font:600 16px var(--display)}
+/* caso de estudio y empresas */
+.case{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(260px,1fr);gap:28px;align-items:start}
+@media (max-width:820px){.case{grid-template-columns:1fr}}
+.case h3{font-size:26px;margin:24px 0 6px}
+.case h3:first-child{margin-top:0}
+.case ul{margin:6px 0 0;padding-left:20px}
+.case li{margin:0 0 7px}
+.facts{border:2px solid var(--ink);border-radius:4px;background:var(--surface);padding:16px 18px}
+.facts .btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.facts .btns a{text-decoration:none}
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:6px 0 18px}
+.svc>div{border:2px solid var(--ink);border-radius:4px;background:var(--surface);padding:16px 18px}
+.svc h3{font-size:26px;margin-bottom:6px}
+.linkrow .lbl{font:600 20px var(--display)}
 </style>
 
 </head>
@@ -204,6 +246,7 @@ img{max-width:100%}
   <nav class="nav" aria-label="Principal">
     <a class="lnk" href="#mapa" data-en="Map">Mapa</a>
     <a class="lnk" href="#lab" data-en="Lab">Laboratorio</a>
+    <a class="lnk" href="#caso" data-en="Case study">Caso de estudio</a>
     <a class="lnk" href="#terminal">Terminal</a>
     <a class="lnk" href="#contacto" data-en="Contact">Contacto</a>
     <button class="btn" id="btnPal" aria-label="Paleta de comandos"><kbd>Ctrl</kbd> <kbd>K</kbd></button>
@@ -218,6 +261,11 @@ img{max-width:100%}
     <p class="lede" data-en="I build systems that work outside the lab: an app that already logs school internships in production, a Beowulf cluster built on a 10-port switch, a perceptron that cannot learn XOR and says so.">Construyo sistemas que funcionan fuera del laboratorio: una app que ya registra prácticas escolares en producción, un cluster Beowulf armado con un switch de 10 puertos y un perceptrón que no aprende XOR y lo demuestra.</p>
     <p class="meta" data-en="Jack · enriqueleondev · Software Engineering, UAEM Tianguistenco · 8th semester · Metepec, Edomex">Jack · enriqueleondev · Ingeniería en Software, UAEM Tianguistenco · 8.º semestre · Metepec, Edomex</p>
     <div class="tags"><span class="badge prod" data-en="Open to Java Trainee / junior full-stack">Disponible: Java Trainee / full-stack junior</span></div>
+    <div class="cta">
+      <a class="btn primary" id="cvLink" href="cv/Enrique-Renteria-Leon-CV-ES.pdf" download data-cv-es="cv/Enrique-Renteria-Leon-CV-ES.pdf" data-cv-en="cv/Enrique-Renteria-Leon-CV-EN.pdf" data-en="Download résumé (PDF)">Descargar CV (PDF)</a>
+      <a class="btn" href="https://enriqueleondev.github.io/rutario/" target="_blank" rel="noopener" data-en="Try the Rutario demo">Probar la demo de Rutario</a>
+      <a class="btn" href="mailto:leonenriquer201@gmail.com" data-en="Email me">Escríbeme</a>
+    </div>
   </div>
 
   <section id="mapa" aria-labelledby="h-mapa">
@@ -231,6 +279,108 @@ img{max-width:100%}
       </div>
       <aside class="panel" id="panel" aria-live="polite"></aside>
     </div>
+    <details class="plist" id="lista">
+      <summary data-en="View all projects as a list">Ver todos los proyectos como lista</summary>
+      <div class="pgrid">
+      <article class="pitem" id="p-rutario">
+        <h3 data-en="Rutario">Rutario</h3>
+        <p class="pst" data-en="In production">En producción</p>
+        <p data-en="School-internship attendance with photo and GPS. Students and teachers log in and out; liaison staff, counselors and directors see the map, manage companies and export Excel and Word reports. Six roles, Spring Boot API, PWA web app and an offline-first Android app. It went through my own security review: forced password change, login rate limit, 365-day evidence purge and encrypted backups. Social service, Jun to Nov 2026.">Control de prácticas escolares con foto y GPS. Alumnos y docentes registran entrada y salida; vinculadores, orientadores y directivos ven el mapa, administran empresas y sacan reportes en Excel y Word. Seis roles, API Spring Boot, webapp PWA y app Android offline-first. Tuvo una revisión de seguridad propia: cambio obligatorio de contraseña, límite de intentos, purga de evidencia a 365 días y respaldos cifrados. Servicio social, jun a nov 2026.</p>
+        <p class="pk">Spring Boot · PostgreSQL · React · TypeScript · Kotlin · Jetpack Compose · Room · Docker · JWT</p>
+        <p class="plk"><a href="https://enriqueleondev.github.io/rutario/" target="_blank" rel="noopener" data-en="Live demo">Demo en vivo</a> · <a href="https://github.com/enriqueleondev/rutario" target="_blank" rel="noopener" data-en="Repository">Repositorio</a></p>
+      </article>
+      <article class="pitem" id="p-cbt">
+        <h3 data-en="CBT website">Sitio web CBT</h3>
+        <p class="pst" data-en="In production">En producción</p>
+        <p data-en="Institutional website for the school, Laravel 12 with a Filament 4 admin panel, deployed with Docker on a VPS. Includes a complaints and suggestions box, legal notices and accessibility fixes.">Sitio institucional del plantel con Laravel 12 y panel Filament 4, desplegado con Docker en VPS propio. Incluye buzón de quejas y sugerencias, avisos legales y mejoras de accesibilidad.</p>
+        <p class="pk">Laravel · Filament · PHP · Docker</p>
+      </article>
+      <article class="pitem" id="p-rentautos">
+        <h3 data-en="RentAutos">RentAutos</h3>
+        <p class="pst" data-en="Course project">Proyecto académico</p>
+        <p data-en="Car rental app: React and Vite front end, Laravel back end with Sanctum, Google login, multi-photo vehicle upload with Dropzone and a pre-booking payment flow.">App de renta de autos: frontend React con Vite, backend Laravel con Sanctum, login con Google, carga de varias fotos por vehículo con Dropzone y flujo de prereserva con pago.</p>
+        <p class="pk">React · Vite · Laravel · Sanctum · OAuth</p>
+      </article>
+      <article class="pitem" id="p-uniconnect">
+        <h3 data-en="UniConnect">UniConnect</h3>
+        <p class="pst" data-en="Course project">Proyecto académico</p>
+        <p data-en="LinkedIn-style social platform in Java and Spring: JWT auth, real-time messages over WebSockets, images on Cloudinary and email through SendGrid.">Red social estilo LinkedIn con Java y Spring: autenticación JWT, mensajes en tiempo real por WebSockets, imágenes en Cloudinary y correos con SendGrid.</p>
+        <p class="pk">Java · Spring Boot · JWT · WebSockets · Cloudinary</p>
+      </article>
+      <article class="pitem" id="p-nexus">
+        <h3 data-en="NexusTech University">NexusTech University</h3>
+        <p class="pst" data-en="Course project">Proyecto académico</p>
+        <p data-en="Course specialization platform with Spring Boot and Angular. I integrated Cloudinary for images, video upload and Thymeleaf email templates.">Plataforma de especialización en cursos con Spring Boot y Angular. Integré Cloudinary para imágenes, subida de video y correos con plantillas Thymeleaf.</p>
+        <p class="pk">Spring Boot · Angular · JWT · Cloudinary · Thymeleaf</p>
+      </article>
+      <article class="pitem" id="p-reval">
+        <h3 data-en="Language revalidation">Revalidación de lenguas</h3>
+        <p class="pst" data-en="In development">En desarrollo</p>
+        <p data-en="System to digitize language revalidation at the university: Laravel 12, Livewire, roles, role-based inboxes, official-letter folios and PDF rulings. Integrates with institutional login and student-lookup services. In development.">Sistema para digitalizar la revalidación de lenguas en la universidad: Laravel 12, Livewire, roles, bandejas por rol, folios de oficios y dictámenes en PDF. Se integra con servicios institucionales de login y consulta de alumnos. En desarrollo.</p>
+        <p class="pk">Laravel · Livewire · MySQL · GraphQL · PHP</p>
+      </article>
+      <article class="pitem" id="p-vps">
+        <h3 data-en="VPS · Docker · Caddy">VPS · Docker · Caddy</h3>
+        <p class="pst" data-en="In production">En producción</p>
+        <p data-en="Rutario and the school website deployed on a VPS with Docker Compose and automatic HTTPS through Caddy. I migrated between servers with a new domain, backups and an nginx upgrade after a CVE.">Despliegue de Rutario y del sitio del plantel en un VPS con Docker Compose y HTTPS automático con Caddy. Migré de un servidor a otro con dominio nuevo, respaldos y actualización de nginx por un CVE.</p>
+        <p class="pk">Docker · Linux · Caddy · PostgreSQL</p>
+      </article>
+      <article class="pitem" id="p-click">
+        <h3 data-en="Click.com datamart">Click.com datamart</h3>
+        <p class="pst" data-en="Course project">Proyecto académico</p>
+        <p data-en="Kimball star-schema datamart for a fictional e-commerce company. PostgreSQL and Apache Hop Web on Docker over Fedora, with DDL, metadata and ETL pipeline documentation.">Datamart en esquema estrella (Kimball) para un e-commerce ficticio. PostgreSQL y Apache Hop Web en Docker sobre Fedora; incluye DDL, metadatos y documentación de pipelines ETL.</p>
+        <p class="pk">PostgreSQL · Docker · Apache Hop · Kimball</p>
+      </article>
+      <article class="pitem" id="p-saaty">
+        <h3 data-en="Urbanization index">Índice de urbanización</h3>
+        <p class="pst" data-en="Course project">Proyecto académico</p>
+        <p data-en="Urbanization index with the Saaty method for Metepec, San Mateo Atenco, Chapultepec and Mexicaltzingo. Pairwise-comparison weights and a weighted overlay in GIS.">Índice de urbanización por método de Saaty para Metepec, San Mateo Atenco, Chapultepec y Mexicaltzingo. Pesos por comparación de pares y superposición ponderada en SIG.</p>
+        <p class="pk">SIG · AHP · Cartografía</p>
+      </article>
+      <article class="pitem" id="p-iva">
+        <h3 data-en="Assault vulnerability">Vulnerabilidad ante asaltos</h3>
+        <p class="pst" data-en="Course project">Proyecto académico</p>
+        <p data-en="Assault-vulnerability index by locality in Toluca for a risk geography course. Same foundations: weighted criteria, consistency ratio and a final map.">Índice de vulnerabilidad ante asaltos por localidad en Toluca para Geografía del Riesgo. Mismos fundamentos: criterios ponderados, razón de consistencia y mapa final.</p>
+        <p class="pk">SIG · AHP · Cartografía</p>
+      </article>
+      <article class="pitem" id="p-beowulf">
+        <h3 data-en="Beowulf cluster">Cluster Beowulf</h3>
+        <p class="pst" data-en="Course project">Proyecto académico</p>
+        <p data-en="Team-built Beowulf cluster on Ubuntu with a 10-port switch: passwordless SSH, /etc/hosts, shared NFS and a primes program launched with mpirun. I documented the manual step by step with screenshots.">Cluster Beowulf en equipo sobre Ubuntu con un switch de 10 puertos: SSH sin contraseña, /etc/hosts, NFS compartido y un programa de primos lanzado con mpirun. Documenté el manual paso a paso con capturas.</p>
+        <p class="pk">Linux · OpenMPI · NFS · SSH</p>
+      </article>
+      <article class="pitem" id="p-smart">
+        <h3 data-en="SmartStore">SmartStore</h3>
+        <p class="pst" data-en="Course project">Proyecto académico</p>
+        <p data-en="JavaFX desktop app for a phone store inventory and sales: DAO pattern with MySQL, role-based views, product cards with images and a sales cart.">App de escritorio con JavaFX para inventario y ventas de una tienda de celulares: patrón DAO con MySQL, vistas por rol, tarjetas de producto con imagen y carrito de venta.</p>
+        <p class="pk">Java · JavaFX · MySQL</p>
+      </article>
+      <article class="pitem" id="p-typenaval">
+        <h3 data-en="TypeNaval">TypeNaval</h3>
+        <p class="pst" data-en="Course project">Proyecto académico</p>
+        <p data-en="Pixel-art naval typing game in Unity 2D: four difficulty levels, word-shuffle logic and a background animation per level.">Juego naval de mecanografía en Unity 2D con pixel art: cuatro niveles de dificultad, lógica de revoltura de palabras y animación de fondo por nivel.</p>
+        <p class="pk">Unity</p>
+      </article>
+      <article class="pitem" id="p-perceptron">
+        <h3 data-en="Perceptron">Perceptrón</h3>
+        <p class="pst" data-en="Course project">Proyecto académico</p>
+        <p data-en="Simple perceptron for AND, OR and XOR with different learning rates, epoch by epoch. XOR does not converge because it is not linearly separable.">Perceptrón simple para AND, OR y XOR con distintas tasas de aprendizaje, época por época. XOR no converge porque no es linealmente separable.</p>
+        <p class="pk">IA</p>
+      </article>
+      <article class="pitem" id="p-people">
+        <h3 data-en="People counting">Conteo de personas</h3>
+        <p class="pst" data-en="Course project">Proyecto académico</p>
+        <p data-en="People-counting system for an image processing course with Python, OpenCV, YOLOv8 and MobileNet SSD, and a Flask interface. Lab work on color, histograms, transforms and segmentation runs on the webcam.">Sistema de conteo de personas para procesamiento de imágenes con Python, OpenCV, YOLOv8 y MobileNet SSD, con interfaz en Flask. Los laboratorios de color, histogramas, transformaciones y segmentación usan la webcam.</p>
+        <p class="pk">Python · OpenCV · YOLO · Flask</p>
+      </article>
+      <article class="pitem" id="p-pic">
+        <h3 data-en="PIC18F4550">PIC18F4550</h3>
+        <p class="pst" data-en="Course project">Proyecto académico</p>
+        <p data-en="Stepper motor control on a PIC18F4550 in assembly: 4×4 matrix keypad, LCD and L293D driver. I debugged floating pins and gaps between Proteus and real hardware.">Control de motor a pasos con PIC18F4550 en ensamblador: teclado matricial 4×4, LCD y puente L293D. Depuré pines flotantes y diferencias entre Proteus y el hardware físico.</p>
+        <p class="pk">Assembly · PIC18F · Proteus</p>
+      </article>
+      </div>
+    </details>
   </section>
 
   <section id="lab" aria-labelledby="h-lab">
@@ -316,6 +466,51 @@ img{max-width:100%}
     </div>
   </section>
 
+  <section id="caso" aria-labelledby="h-caso">
+    <div class="sec-h"><h2 id="h-caso" data-en="Case study: Rutario">Caso de estudio: Rutario</h2></div>
+    <p class="sub" data-en="From a real problem to a production system: what had to be solved, what I decided and why.">De un problema real a un sistema en producción: qué había que resolver, qué decidí y por qué.</p>
+    <div class="case">
+      <div>
+        <h3 data-en="The problem">El problema</h3>
+        <p data-en="A technical high school in the State of Mexico needed to record when students and teachers arrive and leave their internship sites, with verifiable evidence, and to give liaison staff, counselors and directors a map and hours reports.">Un bachillerato tecnológico del Estado de México necesitaba registrar la entrada y salida de alumnos y docentes en sus prácticas con evidencia verificable, y dar a vinculadores, orientadores y directivos un mapa y reportes de horas.</p>
+        <h3 data-en="What shaped the design">Lo que condicionó el diseño</h3>
+        <ul>
+        <li data-en="&lt;b&gt;Unreliable connections.&lt;/b&gt; The Android app stores each entry in Room and syncs it with WorkManager when the network returns; the offline session uses a 30-day refresh token."><b>Conexiones inestables.</b> La app Android guarda cada registro en Room y lo sincroniza con WorkManager cuando vuelve la red; la sesión offline usa un refresh token de 30 días.</li>
+        <li data-en="&lt;b&gt;Evidence that is hard to fake.&lt;/b&gt; Photo and GPS on every entry, mock-location rejection and a block when developer options are on."><b>Evidencia difícil de falsear.</b> Foto y GPS en cada registro, rechazo de ubicación simulada y bloqueo si hay opciones de desarrollador activas.</li>
+        <li data-en="&lt;b&gt;Students&#x27; personal data.&lt;/b&gt; Versioned privacy notice, forced password change on first login, login rate limiting, photo and coordinate purge after 365 days and encrypted backups."><b>Datos personales de estudiantes.</b> Aviso de privacidad versionado, cambio obligatorio de contraseña en el primer acceso, límite de intentos, purga de fotos y coordenadas a los 365 días y respaldos cifrados.</li>
+        <li data-en="&lt;b&gt;Six roles.&lt;/b&gt; Root, Director, Liaison, Counselor, Teacher and Student, each with different permissions."><b>Seis roles.</b> Root, Directivo, Vinculador, Orientador, Docente y Alumno, cada uno con permisos distintos.</li>
+        </ul>
+        <h3 data-en="Technical decisions">Decisiones técnicas</h3>
+        <ul>
+        <li data-en="&lt;b&gt;JWT with &lt;span class=&quot;mono&quot;&gt;token_version&lt;/span&gt;.&lt;/b&gt; Logging out or resetting a password bumps the user&#x27;s version and invalidates earlier tokens, with no blocklist."><b>JWT con <span class="mono">token_version</span>.</b> Cerrar sesión o restablecer la contraseña sube la versión del usuario e invalida los tokens anteriores, sin lista negra.</li>
+        <li data-en="&lt;b&gt;Flyway.&lt;/b&gt; The PostgreSQL schema is versioned and applied when the API starts."><b>Flyway.</b> El esquema de PostgreSQL está versionado y se aplica al arrancar la API.</li>
+        <li data-en="&lt;b&gt;One API for every client.&lt;/b&gt; The React PWA and the Android app use the same REST contract."><b>Una sola API para todos los clientes.</b> La webapp PWA en React y la app Android consumen el mismo contrato REST.</li>
+        <li data-en="&lt;b&gt;Docker Compose and Caddy.&lt;/b&gt; Automatic HTTPS and a one-script deploy: &lt;span class=&quot;mono&quot;&gt;git pull&lt;/span&gt; and &lt;span class=&quot;mono&quot;&gt;docker compose up --build&lt;/span&gt;."><b>Docker Compose y Caddy.</b> HTTPS automático y despliegue con un script: <span class="mono">git pull</span> y <span class="mono">docker compose up --build</span>.</li>
+        </ul>
+        <h3 data-en="Operations">Operación</h3>
+        <p data-en="I migrated the system to a new server with its own domain, upgraded nginx after a CVE and keep encrypted backups. I also ran my own security and privacy review.">Migré el sistema a un servidor nuevo con dominio propio, actualicé nginx por un CVE y mantengo respaldos cifrados. Además hice una revisión de seguridad y privacidad propia.</p>
+        <h3 data-en="How to verify it">Cómo verificarlo</h3>
+        <p data-en="The &lt;a href=&quot;https://enriqueleondev.github.io/rutario/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;live demo&lt;/a&gt; runs the web app in demo mode with fictional data, and the &lt;a href=&quot;https://github.com/enriqueleondev/rutario&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;public repository&lt;/a&gt; has the documentation, the web app and CI. The server and mobile app code is private because this is a production system with real data; I walk through it in a live technical review.">La <a href="https://enriqueleondev.github.io/rutario/" target="_blank" rel="noopener">demo en vivo</a> usa la webapp en modo demostración con datos ficticios, y el <a href="https://github.com/enriqueleondev/rutario" target="_blank" rel="noopener">repositorio público</a> trae la documentación, la webapp y el CI. El código del servidor y de las apps móviles es privado porque es un sistema en producción con datos reales; lo recorro en una revisión técnica en vivo.</p>
+      </div>
+      <aside class="facts" aria-label="Rutario en un vistazo">
+        <dl>
+          <dt data-en="Status">Estado</dt><dd data-en="In production">En producción</dd>
+          <dt data-en="Roles">Roles</dt><dd>6</dd>
+          <dt data-en="Clients">Clientes</dt><dd data-en="PWA web · Android">Web PWA · Android</dd>
+          <dt data-en="Evidence">Evidencia</dt><dd data-en="Photo + GPS">Foto + GPS</dd>
+          <dt data-en="Retention">Retención</dt><dd data-en="365 days">365 días</dd>
+          <dt data-en="Designed for">Pensado para</dt><dd data-en="~400 students">~400 alumnos</dd>
+          <dt data-en="Stack">Stack</dt><dd>Spring Boot · PostgreSQL · React · Kotlin</dd>
+          <dt data-en="Server">Servidor</dt><dd>Docker Compose · Caddy · VPS</dd>
+        </dl>
+        <div class="btns">
+          <a class="btn primary" href="https://enriqueleondev.github.io/rutario/" target="_blank" rel="noopener" data-en="Live demo">Demo en vivo</a>
+          <a class="btn" href="https://github.com/enriqueleondev/rutario" target="_blank" rel="noopener" data-en="Repository">Repositorio</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
   <section id="terminal" aria-labelledby="h-term">
     <div class="sec-h"><h2 id="h-term">Terminal</h2></div>
     <p class="sub" data-en="Type help. Tab completes commands, the up arrow repeats the last one.">Escribe help. Tab completa comandos y la flecha arriba repite el anterior.</p>
@@ -342,9 +537,25 @@ img{max-width:100%}
     </div>
   </section>
 
+  <section id="empresas" aria-labelledby="h-emp">
+    <div class="sec-h"><h2 id="h-emp" data-en="Work with me">Trabajemos juntos</h2></div>
+    <p class="sub" data-en="I am looking for my first position as a Java Trainee or junior full-stack developer. If your school or company needs a system like Rutario instead, I would like to hear about it too.">Busco mi primer puesto como Java Trainee o desarrollador full-stack junior. Si en cambio tu escuela o empresa necesita un sistema parecido a Rutario, también quiero escucharte.</p>
+    <div class="svc">
+      <div><h3 data-en="Attendance with evidence">Control con evidencia</h3><p data-en="Check-ins with photo and GPS, offline operation, roles and Excel and Word reports.">Registro con foto y GPS, funcionamiento sin conexión, roles y reportes en Excel y Word.</p></div>
+      <div><h3 data-en="Custom web and mobile">Web y móvil a la medida</h3><p data-en="Spring Boot API, React web app and an Android app with Kotlin and Jetpack Compose.">API con Spring Boot, webapp con React y app Android con Kotlin y Jetpack Compose.</p></div>
+      <div><h3 data-en="Going to production">Puesta en producción</h3><p data-en="Docker Compose, HTTPS with Caddy, encrypted backups and a security review.">Docker Compose, HTTPS con Caddy, respaldos cifrados y revisión de seguridad.</p></div>
+    </div>
+    <p class="sub" data-en="How we start: you tell me the problem, we build a demo with fictional data and decide the scope from there. Rutario&#x27;s code is private and shown in a live technical review.">Cómo empezamos: me cuentas el problema, armamos una demo con datos ficticios y de ahí decidimos el alcance. El código de Rutario es privado y se muestra en una revisión técnica en vivo.</p>
+    <div class="cta">
+      <a class="btn primary" href="mailto:leonenriquer201@gmail.com?subject=Proyecto%20de%20software" data-en="Tell me about your project">Cuéntame tu proyecto</a>
+      <a class="btn" href="https://www.linkedin.com/in/enrique-renteria-le%C3%B3n-71ba393b5" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </section>
+
   <section id="contacto" aria-labelledby="h-con">
     <div class="sec-h"><h2 id="h-con" data-en="Contact">Contacto</h2></div>
     <div class="links">
+      <div class="linkrow"><span class="lbl" data-en="Résumé (PDF)">CV (PDF)</span><a href="cv/Enrique-Renteria-Leon-CV-ES.pdf" download>Español</a><a href="cv/Enrique-Renteria-Leon-CV-EN.pdf" download>English</a></div>
       <div class="linkrow"><a href="mailto:leonenriquer201@gmail.com" data-en="Email">Correo</a><span class="mono">leonenriquer201@gmail.com</span><button class="btn" data-copy="leonenriquer201@gmail.com" data-en="Copy">Copiar</button></div>
       <div class="linkrow"><a href="https://github.com/enriqueleondev" target="_blank" rel="noopener">GitHub</a><span class="mono">github.com/enriqueleondev</span><button class="btn" data-copy="https://github.com/enriqueleondev" data-en="Copy">Copiar</button></div>
       <div class="linkrow"><a href="https://www.linkedin.com/in/enrique-renteria-le%C3%B3n-71ba393b5" target="_blank" rel="noopener">LinkedIn</a><span class="mono">linkedin.com/in/enrique-renteria-león-71ba393b5</span><button class="btn" data-copy="https://www.linkedin.com/in/enrique-renteria-le%C3%B3n-71ba393b5" data-en="Copy">Copiar</button></div>
@@ -682,13 +893,15 @@ function cBars(times,k){
 const out=$('#out'), cmd=$('#cmd'); const hist=[]; let hi=0;
 function say(txt,cls){ const d=document.createElement('div'); if(cls) d.className=cls; d.textContent=txt; out.appendChild(d); out.scrollTop=out.scrollHeight; }
 const CMDS={
- help(){ say(T('Comandos:','Commands:'),'c'); [['whoami',T('quién soy','who I am')],['ls',T('lista de proyectos','project list')],['open <id>',T('abre una estación del mapa','open a map station')],['skills',T('tecnologías por frecuencia','technologies by frequency')],['lab <checkin|ahp|perceptron|cluster>',T('abre una demo','open a demo')],['contact',T('enlaces','links')],['theme [light|dark]',T('cambia el tema','switch theme')],['lang [es|en]',T('cambia el idioma','switch language')],['clear',T('limpia la pantalla','clear screen')]].forEach(([a,b])=>say('  '+a.padEnd(38)+b,'d')); },
+ help(){ say(T('Comandos:','Commands:'),'c'); [['whoami',T('quién soy','who I am')],['ls',T('lista de proyectos','project list')],['open <id>',T('abre una estación del mapa','open a map station')],['skills',T('tecnologías por frecuencia','technologies by frequency')],['lab <checkin|ahp|perceptron|cluster>',T('abre una demo','open a demo')],['cv',T('descarga mi CV','download my résumé')],['caso',T('caso de estudio de Rutario','Rutario case study')],['contact',T('enlaces','links')],['theme [light|dark]',T('cambia el tema','switch theme')],['lang [es|en]',T('cambia el idioma','switch language')],['clear',T('limpia la pantalla','clear screen')]].forEach(([a,b])=>say('  '+a.padEnd(38)+b,'d')); },
  whoami(){ say('Enrique Rentería León (Jack)'); say(T('Ingeniería en Software, 8.º semestre, UAEM Tianguistenco.','Software Engineering, 8th semester, UAEM Tianguistenco.')); say(T('Full-stack, embebidos, datos y visión. Busco Java Trainee.','Full-stack, embedded, data and vision. Looking for a Java Trainee role.')); },
  ls(){ ST.forEach(s=>say(s.id.padEnd(12)+' '+STATUS[s.s][lang==='en'?1:0].padEnd(20)+' '+s.l.join(','),s.s==='prod'?'c':'')); },
  open(a){ const id=(a[0]||'').toLowerCase(); if(!byId[id]) return say(T('No existe esa estación. Prueba ls.','No such station. Try ls.'),'w'); pick(id,true); say(T('Abriendo ','Opening ')+stName(byId[id])+'…','c'); },
  skills(){ const c={}; ST.forEach(s=>s.k.forEach(k=>c[k]=(c[k]||0)+1)); Object.keys(c).sort((a,b)=>c[b]-c[a]||a.localeCompare(b)).slice(0,14).forEach(k=>say(k.padEnd(18)+'█'.repeat(c[k])+' '+c[k])); },
  lab(a){ const id=(a[0]||'').toLowerCase(); if(!LABS[id]) return say('lab <checkin|ahp|perceptron|cluster>','w'); setLab(id,true); say(T('Abriendo laboratorio: ','Opening lab: ')+LABS[id][lang==='en'?1:0],'c'); },
- contact(){ say('github    https://github.com/enriqueleondev'); say('linkedin  https://www.linkedin.com/in/enrique-renteria-le%C3%B3n-71ba393b5'); },
+ cv(){ say(T('CV en español: ','Spanish résumé: ')+'https://enriqueleondev.github.io/cv/Enrique-Renteria-Leon-CV-ES.pdf','c'); say(T('CV en inglés:  ','English résumé: ')+'https://enriqueleondev.github.io/cv/Enrique-Renteria-Leon-CV-EN.pdf','c'); },
+ caso(){ $('#caso').scrollIntoView({behavior:'smooth'}); say(T('Abriendo el caso de estudio…','Opening the case study…'),'c'); },
+ contact(){ say('email     leonenriquer201@gmail.com'); say('github    https://github.com/enriqueleondev'); say('linkedin  https://www.linkedin.com/in/enrique-renteria-le%C3%B3n-71ba393b5'); },
  theme(a){ setTheme(a[0]||null); say('ok','c'); },
  lang(a){ const l=(a[0]||'').toLowerCase(); setLang(l==='en'||l==='es'?l:(lang==='en'?'es':'en')); say('ok','c'); },
  clear(){ out.textContent=''; },
@@ -714,6 +927,8 @@ function palAll(){
   ST.forEach(s=>a.push({t:stName(s),k:T('estación','station'),run:()=>pick(s.id,true)}));
   Object.keys(LABS).forEach(id=>a.push({t:LABS[id][lang==='en'?1:0],k:T('laboratorio','lab'),run:()=>setLab(id,true)}));
   a.push({t:'Terminal',k:T('sección','section'),run:()=>{$('#terminal').scrollIntoView({behavior:'smooth'});setTimeout(()=>cmd.focus({preventScroll:true}),400)}});
+  a.push({t:T('Caso de estudio: Rutario','Case study: Rutario'),k:T('sección','section'),run:()=>$('#caso').scrollIntoView({behavior:'smooth'})});
+  a.push({t:T('Descargar CV (PDF)','Download résumé (PDF)'),k:T('acción','action'),run:()=>{const c=$('#cvLink'); if(c) c.click();}});
   a.push({t:T('Contacto','Contact'),k:T('sección','section'),run:()=>$('#contacto').scrollIntoView({behavior:'smooth'})});
   a.push({t:T('Cambiar tema','Toggle theme'),k:T('acción','action'),run:()=>setTheme()});
   a.push({t:T('Cambiar idioma','Switch language'),k:T('acción','action'),run:()=>setLang(lang==='en'?'es':'en')});
@@ -753,6 +968,7 @@ function applyStatic(){
   document.documentElement.lang=lang;
   $$('[data-en]').forEach(el=>{ if(el.dataset.es===undefined) el.dataset.es=el.innerHTML; el.innerHTML=lang==='en'?el.dataset.en:el.dataset.es; });
   $('#btnLang').textContent=lang==='en'?'ES':'EN';
+  const cv=$('#cvLink'); if(cv) cv.href=lang==='en'?cv.dataset.cvEn:cv.dataset.cvEs;
   $('#pq').placeholder=T('Buscar proyecto, sección o acción…','Search a project, section or action…');
   $('#cmd').setAttribute('aria-label',T('Comando','Command'));
 }

@@ -316,19 +316,6 @@ img{max-width:100%}
         <p data-en="LinkedIn-style social platform in Java and Spring: JWT auth, real-time messages over WebSockets, images on Cloudinary and email through SendGrid.">Red social estilo LinkedIn con Java y Spring: autenticación JWT, mensajes en tiempo real por WebSockets, imágenes en Cloudinary y correos con SendGrid.</p>
         <p class="pk">Java · Spring Boot · JWT · WebSockets · Cloudinary</p>
       </article>
-      <article class="pitem" id="p-nexus">
-        <h3 data-en="NexusTech University">NexusTech University</h3>
-        <p class="pst" data-en="Course project">Proyecto académico</p>
-        <p data-en="Course specialization platform with Spring Boot and Angular. I integrated Cloudinary for images, video upload and Thymeleaf email templates.">Plataforma de especialización en cursos con Spring Boot y Angular. Integré Cloudinary para imágenes, subida de video y correos con plantillas Thymeleaf.</p>
-        <p class="pk">Spring Boot · Angular · JWT · Cloudinary · Thymeleaf</p>
-      </article>
-      <article class="pitem" id="p-geofence">
-        <h3 data-en="Geofence check-in API">API de check-in con geocerca</h3>
-        <p class="pst" data-en="Open source">Código abierto</p>
-        <p data-en="Original Spring Boot service that decides whether a phone check-in can be trusted: haversine geofence, GPS accuracy, mock location and the age of an offline-queued record. Idempotent API so an offline queue can retry without duplicates. Framework-free domain, unit and API tests, CI and Docker.">Servicio original en Spring Boot que decide si un registro de asistencia desde el celular es confiable: geocerca con haversine, precisión del GPS, ubicación simulada y antigüedad del registro offline. API idempotente para que una cola offline reintente sin duplicar. Dominio sin framework, pruebas unitarias y de API, CI y Docker.</p>
-        <p class="pk">Java · Spring Boot · JUnit 5 · GitHub Actions · Docker</p>
-        <p class="plk"><a href="https://github.com/enriqueleondev/geofence-checkin-service" target="_blank" rel="noopener" data-en="Repository">Repositorio</a></p>
-      </article>
       <article class="pitem" id="p-reval">
         <h3 data-en="Language revalidation">Revalidación de lenguas</h3>
         <p class="pst" data-en="In development">En desarrollo</p>
@@ -610,19 +597,11 @@ const ST=[
   k:['Java','Spring Boot','JWT','WebSockets','Cloudinary'],
   es:'Red social estilo LinkedIn con Java y Spring: autenticación JWT, mensajes en tiempo real por WebSockets, imágenes en Cloudinary y correos con SendGrid.',
   en:'LinkedIn-style social platform in Java and Spring: JWT auth, real-time messages over WebSockets, images on Cloudinary and email through SendGrid.'},
- {id:'nexus',n:'NexusTech University',l:['web'],x:620,y:190,lp:'d',s:'acad',
-  k:['Spring Boot','Angular','JWT','Cloudinary','Thymeleaf'],
-  es:'Plataforma de especialización en cursos con Spring Boot y Angular. Integré Cloudinary para imágenes, subida de video y correos con plantillas Thymeleaf.',
-  en:'Course specialization platform with Spring Boot and Angular. I integrated Cloudinary for images, video upload and Thymeleaf email templates.'},
- {id:'geofence',n:T('API de check-in con geocerca','Geofence check-in API'),l:['web'],x:720,y:190,lp:'u',s:'oss',repo:'https://github.com/enriqueleondev/geofence-checkin-service',
-  k:['Java','Spring Boot','JUnit 5','GitHub Actions','Docker'],
-  es:'Servicio original en Spring Boot que decide si un registro de asistencia desde el celular es confiable: geocerca con haversine, precisión del GPS, ubicación simulada y antigüedad del registro offline. API idempotente para que una cola offline reintente sin duplicar. Dominio sin framework, pruebas unitarias y de API, CI y Docker.',
-  en:'Original Spring Boot service that decides whether a phone check-in can be trusted: haversine geofence, GPS accuracy, mock location and the age of an offline-queued record. Idempotent API so an offline queue can retry without duplicates. Framework-free domain, unit and API tests, CI and Docker.'},
  {id:'reval',n:T('Revalidación de lenguas','Language revalidation'),l:['web'],x:810,y:190,lp:'d',s:'dev',
   k:['Laravel','Livewire','MySQL','GraphQL','PHP'],
   es:'Sistema para digitalizar la revalidación de lenguas en la universidad: Laravel 12, Livewire, roles, bandejas por rol, folios de oficios y dictámenes en PDF. Se integra con servicios institucionales de login y consulta de alumnos. En desarrollo.',
   en:'System to digitize language revalidation at the university: Laravel 12, Livewire, roles, role-based inboxes, official-letter folios and PDF rulings. Integrates with institutional login and student-lookup services. In development.'},
- {id:'marcaje',n:'Marcaje',l:['web'],x:900,y:190,lp:'u',s:'dev',demo:'https://enriqueleondev.github.io/marcaje-demo/',repo:'https://github.com/enriqueleondev/marcaje-app',repoLabel:['Código','Code'],demoRepo:'https://github.com/enriqueleondev/marcaje-demo',
+ {id:'marcaje',n:'Marcaje',l:['web'],x:370,y:130,lp:'u',s:'dev',demo:'https://enriqueleondev.github.io/marcaje-demo/',repo:'https://github.com/enriqueleondev/marcaje-app',repoLabel:['Código','Code'],demoRepo:'https://github.com/enriqueleondev/marcaje-demo',
   k:['Laravel','Livewire','MySQL','PHP','PWA','IndexedDB'],
   es:'Sistema de pase de lista para escuelas con credenciales QR y NFC. Los alumnos registran su entrada en un kiosco PWA que funciona sin conexión y el docente pasa lista en una retícula de lugares que muestra la hora de llegada de cada alumno. Credenciales imprimibles, entrada manual con motivo, reportes de asistencia y panel por roles. Pasó una revisión de seguridad propia: CSP con nonce, bloqueo de login y bitácora. En desarrollo; la demo usa datos ficticios.',
   en:'Attendance system for schools with QR and NFC credentials. Students check in at a PWA kiosk that works offline, and teachers take attendance on a seating grid that shows when each student arrived. Printable credentials, manual check-in with a reason, attendance reports and a role-based panel. It went through my own security review: CSP with nonces, login lockout and an audit log. In development; the demo uses fictional data.'},

@@ -125,8 +125,8 @@ function draw(now,dt){
     if(k>=1){pulses.splice(i,1);continue}
     if(k<0)continue;
     var e=1-Math.pow(1-k,2.2);
-    ctx.beginPath(); ctx.arc(p.x,p.y,p.R*e,0,6.283); ctx.lineWidth=2; ctx.strokeStyle=rgba(pal.lines[p.c],(dark?.5:.34)*(1-k)); ctx.stroke();
-    ctx.beginPath(); ctx.arc(p.x,p.y,p.R*.5*e,0,6.283); ctx.lineWidth=1; ctx.strokeStyle=rgba(pal.lines[p.c],(dark?.3:.2)*(1-k)); ctx.stroke();
+    ctx.beginPath(); ctx.arc(p.x,p.y,Math.max(0,p.R*e),0,6.283); ctx.lineWidth=2; ctx.strokeStyle=rgba(pal.lines[p.c],(dark?.5:.34)*(1-k)); ctx.stroke();
+    ctx.beginPath(); ctx.arc(p.x,p.y,Math.max(0,p.R*.5*e),0,6.283); ctx.lineWidth=1; ctx.strokeStyle=rgba(pal.lines[p.c],(dark?.3:.2)*(1-k)); ctx.stroke();
     ctx.beginPath(); ctx.arc(p.x,p.y,3,0,6.283); ctx.fillStyle=rgba(pal.lines[p.c],(dark?.7:.5)*(1-k*.6)); ctx.fill();
     if(p.label&&!small){ctx.font='11px "JetBrains Mono",monospace';ctx.fillStyle=rgba(pal.muted,.55*(1-k));ctx.fillText(p.label,p.x+9,p.y-8)}
   }

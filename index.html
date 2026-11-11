@@ -341,6 +341,13 @@ img{max-width:100%}
         <p data-en="System to digitize language revalidation at the university: Laravel 12, Livewire, roles, role-based inboxes, official-letter folios and PDF rulings. Integrates with institutional login and student-lookup services. In development.">Sistema para digitalizar la revalidación de lenguas en la universidad: Laravel 12, Livewire, roles, bandejas por rol, folios de oficios y dictámenes en PDF. Se integra con servicios institucionales de login y consulta de alumnos. En desarrollo.</p>
         <p class="pk">Laravel · Livewire · MySQL · GraphQL · PHP</p>
       </article>
+      <article class="pitem" id="p-marcaje">
+        <h3 data-en="Marcaje">Marcaje</h3>
+        <p class="pst" data-en="In development">En desarrollo</p>
+        <p data-en="Attendance system for schools with QR and NFC credentials. Students check in at a PWA kiosk that works offline, and teachers take attendance on a seating grid that shows when each student arrived. Printable credentials, manual check-in with a reason, attendance reports and a role-based panel. It went through my own security review: CSP with nonces, login lockout and an audit log. In development; the demo uses fictional data.">Sistema de pase de lista para escuelas con credenciales QR y NFC. Los alumnos registran su entrada en un kiosco PWA que funciona sin conexión y el docente pasa lista en una retícula de lugares que muestra la hora de llegada de cada alumno. Credenciales imprimibles, entrada manual con motivo, reportes de asistencia y panel por roles. Pasó una revisión de seguridad propia: CSP con nonce, bloqueo de login y bitácora. En desarrollo; la demo usa datos ficticios.</p>
+        <p class="pk">Laravel · Livewire · MySQL · PHP · PWA · IndexedDB</p>
+        <p class="plk"><a href="https://enriqueleondev.github.io/marcaje-demo/" target="_blank" rel="noopener" data-en="Live demo">Demo en vivo</a> · <a href="https://github.com/enriqueleondev/marcaje-app" target="_blank" rel="noopener" data-en="Code">Código</a> · <a href="https://github.com/enriqueleondev/marcaje-demo" target="_blank" rel="noopener" data-en="Demo source">Código de la demo</a></p>
+      </article>
       <article class="pitem" id="p-vps">
         <h3 data-en="VPS · Docker · Caddy">VPS · Docker · Caddy</h3>
         <p class="pst" data-en="In production">En producción</p>
@@ -633,18 +640,22 @@ const ST=[
   k:['Java','Spring Boot','JWT','WebSockets','Cloudinary'],
   es:'Red social estilo LinkedIn con Java y Spring: autenticación JWT, mensajes en tiempo real por WebSockets, imágenes en Cloudinary y correos con SendGrid.',
   en:'LinkedIn-style social platform in Java and Spring: JWT auth, real-time messages over WebSockets, images on Cloudinary and email through SendGrid.'},
- {id:'nexus',n:'NexusTech University',l:['web'],x:640,y:190,lp:'d',s:'acad',
+ {id:'nexus',n:'NexusTech University',l:['web'],x:620,y:190,lp:'d',s:'acad',
   k:['Spring Boot','Angular','JWT','Cloudinary','Thymeleaf'],
   es:'Plataforma de especialización en cursos con Spring Boot y Angular. Integré Cloudinary para imágenes, subida de video y correos con plantillas Thymeleaf.',
   en:'Course specialization platform with Spring Boot and Angular. I integrated Cloudinary for images, video upload and Thymeleaf email templates.'},
- {id:'geofence',n:T('API de check-in con geocerca','Geofence check-in API'),l:['web'],x:750,y:190,lp:'u',s:'oss',repo:'https://github.com/enriqueleondev/geofence-checkin-service',
+ {id:'geofence',n:T('API de check-in con geocerca','Geofence check-in API'),l:['web'],x:720,y:190,lp:'u',s:'oss',repo:'https://github.com/enriqueleondev/geofence-checkin-service',
   k:['Java','Spring Boot','JUnit 5','GitHub Actions','Docker'],
   es:'Servicio original en Spring Boot que decide si un registro de asistencia desde el celular es confiable: geocerca con haversine, precisión del GPS, ubicación simulada y antigüedad del registro offline. API idempotente para que una cola offline reintente sin duplicar. Dominio sin framework, pruebas unitarias y de API, CI y Docker.',
   en:'Original Spring Boot service that decides whether a phone check-in can be trusted: haversine geofence, GPS accuracy, mock location and the age of an offline-queued record. Idempotent API so an offline queue can retry without duplicates. Framework-free domain, unit and API tests, CI and Docker.'},
- {id:'reval',n:T('Revalidación de lenguas','Language revalidation'),l:['web'],x:860,y:190,lp:'d',s:'dev',
+ {id:'reval',n:T('Revalidación de lenguas','Language revalidation'),l:['web'],x:810,y:190,lp:'d',s:'dev',
   k:['Laravel','Livewire','MySQL','GraphQL','PHP'],
   es:'Sistema para digitalizar la revalidación de lenguas en la universidad: Laravel 12, Livewire, roles, bandejas por rol, folios de oficios y dictámenes en PDF. Se integra con servicios institucionales de login y consulta de alumnos. En desarrollo.',
   en:'System to digitize language revalidation at the university: Laravel 12, Livewire, roles, role-based inboxes, official-letter folios and PDF rulings. Integrates with institutional login and student-lookup services. In development.'},
+ {id:'marcaje',n:'Marcaje',l:['web'],x:900,y:190,lp:'u',s:'dev',demo:'https://enriqueleondev.github.io/marcaje-demo/',repo:'https://github.com/enriqueleondev/marcaje-app',repoLabel:['Código','Code'],demoRepo:'https://github.com/enriqueleondev/marcaje-demo',
+  k:['Laravel','Livewire','MySQL','PHP','PWA','IndexedDB'],
+  es:'Sistema de pase de lista para escuelas con credenciales QR y NFC. Los alumnos registran su entrada en un kiosco PWA que funciona sin conexión y el docente pasa lista en una retícula de lugares que muestra la hora de llegada de cada alumno. Credenciales imprimibles, entrada manual con motivo, reportes de asistencia y panel por roles. Pasó una revisión de seguridad propia: CSP con nonce, bloqueo de login y bitácora. En desarrollo; la demo usa datos ficticios.',
+  en:'Attendance system for schools with QR and NFC credentials. Students check in at a PWA kiosk that works offline, and teachers take attendance on a seating grid that shows when each student arrived. Printable credentials, manual check-in with a reason, attendance reports and a role-based panel. It went through my own security review: CSP with nonces, login lockout and an audit log. In development; the demo uses fictional data.'},
  {id:'vps',n:'VPS · Docker · Caddy',l:['infra'],x:110,y:265,lp:'r',s:'prod',
   k:['Docker','Linux','Caddy','PostgreSQL'],
   es:'Despliegue de Rutario y del sitio del plantel en un VPS con Docker Compose y HTTPS automático con Caddy. Migré de un servidor a otro con dominio nuevo, respaldos y actualización de nginx por un CVE.',
@@ -731,7 +742,8 @@ function renderPanel(){
    <div class="row" style="margin-top:16px">
      ${s.lab?`<button class="btn primary" data-lab-go="${s.lab}">${T('Probar demo','Try the demo')}</button>`:''}
      ${s.demo&&s.demo.indexOf('__DOMINIO'+'__')<0?`<a class="btn" href="${s.demo}" target="_blank" rel="noopener" style="text-decoration:none">${T('Demo en vivo','Live demo')}</a>`:''}
-     ${s.repo?`<a class="btn" href="${s.repo}" target="_blank" rel="noopener" style="text-decoration:none">${T('Repositorio','Repository')}</a>`:''}
+     ${s.repo?`<a class="btn" href="${s.repo}" target="_blank" rel="noopener" style="text-decoration:none">${s.repoLabel?T(...s.repoLabel):T('Repositorio','Repository')}</a>`:''}
+     ${s.demoRepo?`<a class="btn" href="${s.demoRepo}" target="_blank" rel="noopener" style="text-decoration:none">${T('Código de la demo','Demo source')}</a>`:''}
    </div>`;
 }
 function pick(id,scroll){

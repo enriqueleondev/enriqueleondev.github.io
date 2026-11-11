@@ -681,7 +681,7 @@ function renderLegend(){
   $('#legend').innerHTML=LINES.map(L=>`<button class="lg" data-line="${L.id}" aria-pressed="${lineF===L.id}"><i style="background:var(--l-${L.id})"></i>${T(L.es,L.en)}</button>`).join('');
 }
 // Etiquetas que se muestran en el filtro (las demás siguen visibles en el detalle de cada estación)
-const SHOW=new Set(['Java','Spring Boot','JWT','WebSockets','Docker','PostgreSQL','MySQL','React','TypeScript','Angular','Kotlin','Laravel','PHP','GraphQL','Linux','GitHub Actions','JUnit 5','Python','OpenCV','Unity','SIG']);
+const SHOW=new Set(['Java','Spring Boot','JWT','WebSockets','Docker','PostgreSQL','MySQL','React','TypeScript','Angular','Kotlin','Laravel','PHP','GraphQL','Linux','GitHub Actions','Python','OpenCV','Unity','SIG']);
 function renderSkills(){
   const c={}; ST.forEach(s=>s.k.forEach(k=>{ if(SHOW.has(k)) c[k]=(c[k]||0)+1 }));
   const tags=Object.keys(c).sort((a,b)=>c[b]-c[a]||a.localeCompare(b));

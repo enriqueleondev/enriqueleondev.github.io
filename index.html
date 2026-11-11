@@ -711,8 +711,10 @@ function renderMap(){
 function renderLegend(){
   $('#legend').innerHTML=LINES.map(L=>`<button class="lg" data-line="${L.id}" aria-pressed="${lineF===L.id}"><i style="background:var(--l-${L.id})"></i>${T(L.es,L.en)}</button>`).join('');
 }
+// Etiquetas que se muestran en el filtro (las demás siguen visibles en el detalle de cada estación)
+const SHOW=new Set(['Java','Spring Boot','JWT','WebSockets','Docker','PostgreSQL','MySQL','React','TypeScript','Angular','Kotlin','Laravel','PHP','GraphQL','Linux','GitHub Actions','JUnit 5','Python','OpenCV','Unity','SIG']);
 function renderSkills(){
-  const c={}; ST.forEach(s=>s.k.forEach(k=>c[k]=(c[k]||0)+1));
+  const c={}; ST.forEach(s=>s.k.forEach(k=>{ if(SHOW.has(k)) c[k]=(c[k]||0)+1 }));
   const tags=Object.keys(c).sort((a,b)=>c[b]-c[a]||a.localeCompare(b));
   $('#skills').innerHTML=tags.map(k=>`<button class="chip" data-skill="${k}" aria-pressed="${skill===k}">${k} <span style="opacity:.6">${c[k]}</span></button>`).join('');
 }
@@ -927,7 +929,7 @@ const CMDS={
  whoami(){ say('Enrique Rentería León (Jack)'); say(T('Ingeniería en Software, 8.º semestre, UAEM Tianguistenco.','Software Engineering, 8th semester, UAEM Tianguistenco.')); say(T('Full-stack, embebidos, datos y visión. Busco Java Trainee.','Full-stack, embedded, data and vision. Looking for a Java Trainee role.')); },
  ls(){ ST.forEach(s=>say(s.id.padEnd(12)+' '+STATUS[s.s][lang==='en'?1:0].padEnd(20)+' '+s.l.join(','),s.s==='prod'?'c':'')); },
  open(a){ const id=(a[0]||'').toLowerCase(); if(!byId[id]) return say(T('No existe esa estación. Prueba ls.','No such station. Try ls.'),'w'); pick(id,true); say(T('Abriendo ','Opening ')+stName(byId[id])+'…','c'); },
- skills(){ const c={}; ST.forEach(s=>s.k.forEach(k=>c[k]=(c[k]||0)+1)); Object.keys(c).sort((a,b)=>c[b]-c[a]||a.localeCompare(b)).slice(0,14).forEach(k=>say(k.padEnd(18)+'█'.repeat(c[k])+' '+c[k])); },
+ skills(){ const c={}; ST.forEach(s=>s.k.forEach(k=>{ if(SHOW.has(k)) c[k]=(c[k]||0)+1 })); Object.keys(c).sort((a,b)=>c[b]-c[a]||a.localeCompare(b)).slice(0,14).forEach(k=>say(k.padEnd(18)+'█'.repeat(c[k])+' '+c[k])); },
  lab(a){ const id=(a[0]||'').toLowerCase(); if(!LABS[id]) return say('lab <checkin|ahp|perceptron|cluster>','w'); setLab(id,true); say(T('Abriendo laboratorio: ','Opening lab: ')+LABS[id][lang==='en'?1:0],'c'); },
  cv(){ say(T('CV interactivo: ','Interactive résumé: ')+'https://enriqueleondev.github.io/cv/','c'); say(T('CV en español: ','Spanish résumé: ')+'https://enriqueleondev.github.io/cv/Enrique-Renteria-Leon-CV-ES.pdf','c'); say(T('CV en inglés:  ','English résumé: ')+'https://enriqueleondev.github.io/cv/Enrique-Renteria-Leon-CV-EN.pdf','c'); },
  caso(){ $('#caso').scrollIntoView({behavior:'smooth'}); say(T('Abriendo el caso de estudio…','Opening the case study…'),'c'); },

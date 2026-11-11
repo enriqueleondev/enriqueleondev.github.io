@@ -123,6 +123,7 @@ function draw(now,dt){
   for(var i=pulses.length-1;i>=0;i--){
     var p=pulses[i], k=(now-p.t0)/p.life;
     if(k>=1){pulses.splice(i,1);continue}
+    if(k<0)continue;
     var e=1-Math.pow(1-k,2.2);
     ctx.beginPath(); ctx.arc(p.x,p.y,p.R*e,0,6.283); ctx.lineWidth=2; ctx.strokeStyle=rgba(pal.lines[p.c],(dark?.5:.34)*(1-k)); ctx.stroke();
     ctx.beginPath(); ctx.arc(p.x,p.y,p.R*.5*e,0,6.283); ctx.lineWidth=1; ctx.strokeStyle=rgba(pal.lines[p.c],(dark?.3:.2)*(1-k)); ctx.stroke();
